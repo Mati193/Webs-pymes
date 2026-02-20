@@ -13,7 +13,7 @@ function NavBar({ logo, marca, t1, t2, t3 }) {
               alt=""
               width="30"
               height="24"
-              className="d-inline-block align-text-top"
+              className="d-inline-block align-text-top rounded-circle img-fluid"
             />
             {marca}
           </a>
