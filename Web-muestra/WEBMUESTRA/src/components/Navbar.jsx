@@ -14,7 +14,7 @@ const Navbar = ({ activeSection, scrollToSection }) => {
 
   const navItems = [
     { id: 'home', label: 'Inicio' },
-    { id: 'about', label: 'Sobre mí' },
+    { id: 'about', label: 'Sobre Nosotros' },
     { id: 'projects', label: 'Proyectos' },
     { id: 'skills', label: 'Skills' },
     { id: 'contact', label: 'Contacto' }
@@ -25,7 +25,7 @@ const Navbar = ({ activeSection, scrollToSection }) => {
       <div className="nav-container">
         <div className="logo" onClick={() => scrollToSection('home')}>
           <span className="logo-text">PYCX</span>
-          <span className="logo-dot"></span>
+          <span className="logo-dot"><img src="" alt="" /></span>
         </div>
         
         <div 

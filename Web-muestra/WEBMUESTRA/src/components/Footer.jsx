@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <p>© {currentYear} PYCX - Diseño y desarrollo minimalista</p>
+        <p>© {currentYear} PYCX - Diseño de paginas web y desarrollo para PYMES</p>
       </div>
     </footer>
   );

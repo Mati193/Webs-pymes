@@ -4,14 +4,14 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce Platform',
+      title: 'EIMA EDUCACION',
       description: 'Plataforma de comercio electrónico con React y Node.js',
       image: 'https://via.placeholder.com/400x300/5C15BF/FFFFFF?text=E-commerce',
-      tags: ['React', 'Node.js', 'MongoDB']
+      tags: ['React', 'Node.js', 'JavaScript']
     },
     {
       id: 2,
-      title: 'Dashboard Analytics',
+      title: 'Panaderia PHANTEOM',
       description: 'Panel de control interactivo con gráficos en tiempo real',
       image: 'https://via.placeholder.com/400x300/6289D9/FFFFFF?text=Dashboard',
       tags: ['React', 'D3.js', 'Express']
