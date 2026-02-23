@@ -1,0 +1,14 @@
+.contenedor {
+  background-color: #c86514;
+  text-align: center;
+  height: 50vh;
+  padding: 50px;
+}
+h2 {
+  display: block;
+  width: 100%;
+}
+
+p {
+  display: block;
+}

@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import "./styles.css";
-
+import "./about.css";
+import "../global.css";
 function About({ titulo, presentacion }) {
   return (
     <div className="contenedor">

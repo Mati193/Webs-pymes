@@ -1,7 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import "./styles.css";
+import "./bienvenida.css";
+import "../global.css";
 
 function Bienvenida({ logo, marca, eslogan, t1, desc }) {
   return (
