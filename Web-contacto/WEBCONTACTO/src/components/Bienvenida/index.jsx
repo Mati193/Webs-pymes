@@ -6,7 +6,7 @@ import "../global.css";
 
 function Bienvenida({ logo, marca, eslogan, t1, desc }) {
   return (
-    <div className="parent">
+    <div className="parent" id="bienvenida">
       <div className="div1">{t1}</div>
       <div className="div2">
         <img src={logo} alt="logo" className="rounded-circle img-fluid" />

@@ -12,10 +12,13 @@ function NavBar({ logo, marca, t1, t2, t3 }) {
             alt=""
             className="d-inline-block align-text-top rounded-circle img-fluid navbar-brand img-navbar"
           />
-          <a className="navbar-brand a-navbar" href="#">
+          <a className="navbar-brand a-navbar" href="#bienvenida">
             {marca}
           </a>
-          <a className="navbar-brand d-inline-block align ms-auto" href="#">
+          <a
+            className="navbar-brand d-inline-block align ms-auto"
+            href="#about"
+          >
             {t1}
           </a>
           <a className="navbar-brand d-inline-block align" href="#">

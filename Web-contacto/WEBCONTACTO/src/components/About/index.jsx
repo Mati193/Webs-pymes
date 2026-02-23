@@ -4,7 +4,7 @@ import "./about.css";
 import "../global.css";
 function About({ titulo, presentacion }) {
   return (
-    <div className="contenedor">
+    <div className="contenedor" id="about">
       <h2>{titulo}</h2>
       <p>{presentacion}</p>
     </div>

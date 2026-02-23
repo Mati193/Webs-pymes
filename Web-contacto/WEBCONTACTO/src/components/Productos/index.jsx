@@ -1,0 +1,8 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import "./productos.css";
+import "../global.css";
+
+function Productos() {}
+
+export default Productos;
