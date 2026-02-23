@@ -9,11 +9,16 @@ function Bienvenida({ logo, marca, eslogan, t1, desc }) {
       <div className="div1">{t1}</div>
       <div className="div2">
         <img src={logo} alt="logo" className="rounded-circle img-fluid" />
-        <p>{eslogan}</p>
+        <h4>{eslogan}</h4>
       </div>
       <div className="div3">
         <h2>{marca}</h2>
         <p>{desc}</p>
+      </div>
+      <div className="hero-background">
+        <div className="gradient-orb orb-1"></div>
+        <div className="gradient-orb orb-2"></div>
+        <div className="gradient-orb orb-3"></div>
       </div>
     </div>
   );

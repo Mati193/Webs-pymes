@@ -1,6 +1,7 @@
 import NavBar from "./components/NavBar";
-import Bienvenida from "./components/Bienvenida/index";
+import Bienvenida from "./components/Bienvenida";
 import logo from "./assets/Logo_panteon.jpg";
+import About from "./components/About";
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
         t1={"Estudiante de gastronomia en la FTA"}
         eslogan={"Pyme de panificaciones"}
         logo={logo}
+      />
+      <About
+        titulo={"Sobre nosotros"}
+        presentacion={"bla bla bla bla bla bla bla bla bla bla"}
       />
     </div>
   );
