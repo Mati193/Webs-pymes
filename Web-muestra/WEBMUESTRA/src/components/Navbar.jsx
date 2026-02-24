@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Navbar = ({ activeSection, scrollToSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,28 +8,36 @@ const Navbar = ({ activeSection, scrollToSection }) => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
+<<<<<<< HEAD
     { id: 'home', label: 'Inicio' },
     { id: 'about', label: 'Sobre Nosotros' },
     { id: 'projects', label: 'Proyectos' },
     { id: 'skills', label: 'Skills' },
     { id: 'contact', label: 'Contacto' }
+=======
+    { id: "home", label: "Inicio" },
+    { id: "about", label: "Sobre mí" },
+    { id: "projects", label: "Proyectos" },
+    { id: "skills", label: "Skills" },
+    { id: "contact", label: "Contacto" },
+>>>>>>> a021394fbadadfb33d2ec896608a7dfaf3525bfb
   ];
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-container">
-        <div className="logo" onClick={() => scrollToSection('home')}>
+        <div className="logo" onClick={() => scrollToSection("home")}>
           <span className="logo-text">PYCX</span>
           <span className="logo-dot"><img src="" alt="" /></span>
         </div>
-        
-        <div 
-          className={`menu-icon ${isMenuOpen ? 'open' : ''}`} 
+
+        <div
+          className={`menu-icon ${isMenuOpen ? "open" : ""}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span></span>
@@ -37,12 +45,12 @@ const Navbar = ({ activeSection, scrollToSection }) => {
           <span></span>
         </div>
 
-        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+        <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
           {navItems.map((item) => (
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
-                className={activeSection === item.id ? 'active' : ''}
+                className={activeSection === item.id ? "active" : ""}
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection(item.id);

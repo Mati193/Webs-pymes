@@ -1,0 +1,93 @@
+@keyframes movimientoFondo {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.parent {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+
+  align-items: center;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 180, 60, 0.45),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 120, 40, 0.35),
+      transparent 40%
+    ),
+    linear-gradient(135deg, #dda138, #c86514, #f4d62e);
+
+  background-size: 300% 300%;
+  animation: movimientoFondo 15s ease-in-out infinite;
+}
+
+.div1 {
+  grid-column: 1 / 3;
+  text-align: center;
+}
+
+.div2 {
+  grid-column: 1 / 2;
+  text-align: center;
+}
+
+.div3 {
+  grid-column: 2 / 3;
+  text-align: center;
+}
+
+img {
+  width: 20%;
+  height: 20%;
+  align-items: center;
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: float 20s infinite;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: #bfb115;
+  top: -200px;
+  left: -200px;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: #d9b162;
+  bottom: -200px;
+  right: -200px;
+  animation-delay: -5s;
+}
+
+.orb-3 {
+  width: 300px;
+  height: 300px;
+  background: #f2a766;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: -10s;
+}

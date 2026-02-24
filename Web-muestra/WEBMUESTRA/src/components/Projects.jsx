@@ -5,8 +5,8 @@ const Projects = () => {
     {
       id: 1,
       title: 'EIMA EDUCACION',
-      description: 'Plataforma de comercio electrónico con React y Node.js',
-      image: 'https://via.placeholder.com/400x300/5C15BF/FFFFFF?text=E-commerce',
+      description: 'Plataforma de Academia',
+      image: 'https://eima-educacion.netlify.app/',
       tags: ['React', 'Node.js', 'JavaScript']
     },
     {
@@ -47,7 +47,7 @@ const Projects = () => {
                     <span key={index}>{tag}</span>
                   ))}
                 </div>
-                <button className="card-btn">Ver proyecto →</button>
+                <button className="card-btn"><a href="https://eima-educacion.netlify.app/" target="_blank">Ver proyecto →</a></button>
               </div>
             </div>
           ))}

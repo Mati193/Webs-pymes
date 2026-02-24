@@ -1,0 +1,107 @@
+/* dejamos unos estilos x aca, sin que se enoje el socio */
+
+/* la barra principal */
+.navbar {
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, #1a1e2b 0%, #2d3349 100%) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* cuando pasas el mouse queda mas sombra, copado */
+.navbar:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* la foto/logo */
+.img-navbar {
+  width: 120px !important;
+  height: 80px !important;
+  margin: 0 10px 0 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  object-fit: cover;
+}
+
+/* el logo se mueve cuando pasas el mouse, re piola */
+.img-navbar:hover {
+  transform: scale(1.1) rotate(5deg);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* todos los textos de la navbar */
+.navbar-brand {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+  margin: 0 15px !important;
+}
+
+/* rayita abajo que aparece solita */
+.navbar-brand::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6c5ce7, #a463f5);
+  transition: width 0.3s ease;
+}
+
+/* cuando pasas el mouse se estira la rayita, magia */
+.navbar-brand:hover::after {
+  width: 100%;
+}
+
+/* el link de la marca, ese que dice el nombre */
+.a-navbar {
+  margin-left: 5px;
+  font-size: 1.3rem;
+  font-weight: 600 !important;
+  background: linear-gradient(45deg, #fff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* pa que la rayita se vea igual aunque el texto sea transparente */
+.a-navbar::after {
+  background: linear-gradient(90deg, #6c5ce7, #a463f5);
+}
+
+/* los botoncitos de navegacion (t1, t2, t3) */
+.navbar-brand.d-inline-block {
+  padding: 8px 16px !important;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* cuando pasas el mouse se re copan los botones */
+.navbar-brand.d-inline-block:hover {
+  background: rgba(108, 92, 231, 0.15);
+  border-color: rgba(108, 92, 231, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(108, 92, 231, 0.2);
+}
+
+/* pa que entre lindo desde arriba */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  animation: slideDown 0.5s ease-out;
+}
