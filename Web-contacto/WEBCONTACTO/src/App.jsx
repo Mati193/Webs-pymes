@@ -2,6 +2,44 @@ import NavBar from "./components/NavBar";
 import Bienvenida from "./components/Bienvenida";
 import logo from "./assets/Logo_panteon.jpg";
 import About from "./components/About";
+import Productos from "./components/Productos";
+
+const productos = [
+  ["Pan casero", "Pan de harina integral casero", logo],
+  [
+    "Bizcochuelo de chocolate",
+    "Rico bizcochuelo de chocolate relleno de dulce de leche",
+    logo,
+  ],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+];
 
 function App() {
   return (
@@ -24,6 +62,7 @@ function App() {
         titulo={"Sobre nosotros"}
         presentacion={"bla bla bla bla bla bla bla bla bla bla"}
       />
+      <Productos productos={productos} />
     </div>
   );
 }
