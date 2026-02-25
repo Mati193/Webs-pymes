@@ -1,6 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import "./navbar.css";
 function NavBar({ logo, marca, t1, t2, t3 }) {
   return (

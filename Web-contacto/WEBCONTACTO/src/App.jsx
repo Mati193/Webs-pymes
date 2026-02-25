@@ -4,41 +4,72 @@ import logo from "./assets/Logo_panteon.jpg";
 import About from "./components/About";
 import Productos from "./components/Productos";
 
+// Constante para función productos Mati
+// const productos = [
+//   ["Pan casero", "Pan de harina integral casero", logo],
+//   [
+//     "Bizcochuelo de chocolate",
+//     "Rico bizcochuelo de chocolate relleno de dulce de leche",
+//     logo,
+//   ],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+//   ["Medialunas", "Medialunas de grasa o manteca", logo],
+// ];
+
+// Constante para funcion productos Tito
 const productos = [
-  ["Pan casero", "Pan de harina integral casero", logo],
-  [
-    "Bizcochuelo de chocolate",
-    "Rico bizcochuelo de chocolate relleno de dulce de leche",
-    logo,
-  ],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
-  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  {
+    nombre: "Pan artesanal",
+    descripcion: "Pan casero elaborado con fermentación natural.",
+    precio: "$1500",
+  },
+  {
+    nombre: "Medialunas",
+    descripcion: "Medialunas de manteca recién horneadas.",
+    precio: "$800",
+  },
+  {
+    nombre: "Facturas surtidas",
+    descripcion: "Variedad de facturas dulces tradicionales.",
+    precio: "$900",
+  },
+  {
+    nombre: "Chipá",
+    descripcion:
+      "Clásico chipá artesanal, crocante por fuera y suave por dentro.",
+    precio: "$700",
+  },
+  {
+    nombre: "Budines caseros",
+    descripcion: "Budines de limón, naranja y chocolate.",
+    precio: "$2000",
+  },
 ];
 
 function App() {
@@ -52,10 +83,12 @@ function App() {
         t3={"Contacto"}
       />
       <Bienvenida
-        desc={"Servicio Take Away \n Envíos a domicilio en Río Ceballos "}
+        desc={
+          "Pan artesanal recién horneado todos los días.\nTake Away y envíos a domicilio en Río Ceballos."
+        }
         marca={"Pan-teon"}
-        t1={"Estudiante de gastronomia en la FTA"}
-        eslogan={"Pyme de panificaciones"}
+        t1={"Panadería artesanal & pastelería casera"}
+        eslogan={"Sabor casero que se siente en cada bocado"}
         logo={logo}
       />
       <About

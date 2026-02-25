@@ -2,15 +2,15 @@ import React from "react";
 
 const About = () => {
   const stats = [
-    { number: "3+", label: "Años experiencia" },
-    { number: "20+", label: "Proyectos completados" },
-    { number: "15+", label: "Clientes satisfechos" },
+    { number: "1+", label: "Años experiencia" },
+    { number: "10+", label: "Proyectos completados" },
+    { number: "10+", label: "Clientes satisfechos" },
   ];
 
   return (
     <section id="about" className="section about">
-      <div className="">
-        <h2 className="section-title fade-in">Sobre mí</h2>
+      <div className="container">
+        <h2 className="section-title fade-in">Sobre nosotros</h2>
         <div className="about-content">
           <div className="about-text fade-in">
             <p className="about-description">
