@@ -3,7 +3,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./productos.css";
 import "../global.css";
 
-// Esta funcion la hizo Mati
+/*Esta funcion la hizo Mati*/
 function Productos({ productos }) {
   return (
     <section className="fondo">
@@ -13,7 +13,7 @@ function Productos({ productos }) {
       </div>
       <div className="contenedor-productos">
         {productos.map((producto, index) => (
-          <div className="card card-hover" id={index}>
+          <div className="card card-hover" key={index}>
             <img
               src={producto[2]}
               className="img-productos"
@@ -30,23 +30,25 @@ function Productos({ productos }) {
   );
 }
 
-// Funcion de Tito
-// function Productos({ productos }) {
-//   return (
-//     <section className="productos" id="productos">
-//       <h2>Nuestros Productos</h2>
+/*Funcion de Tito
+function Productos({ productos }) {
+  return (
+    <section className="productos" id="productos">
+      <h2>Nuestros Productos</h2>
 
-//       <div className="productos-grid">
-//         {productos.map((producto, index) => (
-//           <div className="producto-card" key={index}>
-//             <h3>{producto.nombre}</h3>
-//             <p>{producto.descripcion}</p>
-//             <span className="precio">{producto.precio}</span>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// }
+      <div className="productos-grid">
+        {productos.map((producto, index) => (
+          <div className="producto-card" key={index}>
+            <h3>{producto.nombre}</h3>
+            <p>{producto.descripcion}</p>
+            <span className="precio">{producto.precio}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+*/
 
 export default Productos;
