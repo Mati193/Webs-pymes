@@ -38,6 +38,7 @@
 
 /* Hover elegante */
 .card-hover:hover {
+  cursor: default;
   border: #dda138 solid;
   transform: translateY(-8px);
   box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.15);

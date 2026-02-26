@@ -4,12 +4,12 @@ import "./productos.css";
 import "../global.css";
 
 /*Esta funcion la hizo Mati*/
-function Productos({ productos }) {
+function Productos({ eslogan, productos }) {
   return (
     <section className="fondo" id="productos">
       <div className="titulos">
         <h2>Nuestros productos</h2>
-        <h5>Una seleccion de nuestras más deliciosas especialidades</h5>
+        <h5>{eslogan}</h5>
       </div>
       <div className="contenedor-productos">
         {productos.map((producto, index) => (

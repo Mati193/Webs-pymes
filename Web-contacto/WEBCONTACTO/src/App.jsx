@@ -95,7 +95,10 @@ function App() {
         titulo={"Sobre nosotros"}
         presentacion={"bla bla bla bla bla bla bla bla bla bla"}
       />
-      <Productos productos={productos} />
+      <Productos
+        eslogan={"Una seleccion de nuestras más deliciosas especialidades"}
+        productos={productos}
+      />
     </div>
   );
 }
