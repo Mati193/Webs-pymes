@@ -29,17 +29,18 @@
 /* ===== CARD ===== */
 .card {
   width: 260px;
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 /* Hover elegante */
 .card-hover:hover {
+  border: #dda138 solid;
   transform: translateY(-8px);
-  box-shadow: 0px 8px 22px rgba(0,0,0,0.15);
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.15);
 }
 
 /* ===== IMAGEN ===== */

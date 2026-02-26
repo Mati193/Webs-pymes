@@ -6,8 +6,8 @@ import "../global.css";
 /*Esta funcion la hizo Mati*/
 function Productos({ productos }) {
   return (
-    <section className="fondo">
-      <div className="titulos" id="productos">
+    <section className="fondo" id="productos">
+      <div className="titulos">
         <h2>Nuestros productos</h2>
         <h5>Una seleccion de nuestras más deliciosas especialidades</h5>
       </div>
