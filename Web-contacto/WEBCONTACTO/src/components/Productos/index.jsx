@@ -13,7 +13,7 @@ function Productos({ productos }) {
       </div>
       <div className="contenedor-productos">
         {productos.map((producto, index) => (
-          <div className="card card-hover" id={index}>
+          <div className="card card-hover" key={index}>
             <img
               src={producto[2]}
               className="img-productos"
