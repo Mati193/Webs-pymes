@@ -22,12 +22,12 @@
   align-items: center;
 }
 
-.logo {
+.logo img{
   font-size: 2rem;
-  font-weight: 800;
-  color: var(--primary);
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 80px;
+  height: 70px;
 }
 
 .logo:hover {
@@ -40,16 +40,18 @@
   list-style: none;
 }
 
+
 .nav-menu button {
   background: none;
   border: none;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--dark);
+  color: rgb(96, 182, 240);
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   padding: 0.5rem 0;
+  font-weight: bolder;
 }
 
 .nav-menu button::after {

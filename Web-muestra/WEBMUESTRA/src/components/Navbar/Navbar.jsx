@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
+import logo from "/public/pycx.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -25,7 +26,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-container container">
         <div className="logo" onClick={() => scrollToSection("hero")}>
-          PYCX
+          <img src="pycx.png" alt="" />
         </div>
 
         <div

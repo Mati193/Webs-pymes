@@ -7,8 +7,8 @@
 
 .section-badge {
   display: inline-block;
-  background: rgba(37, 99, 235, 0.1);
-  color: var(--primary);
+  background: rgba(0, 81, 255, 0.1);
+  color: gold;
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-weight: 600;
@@ -17,7 +17,7 @@
 }
 
 .section-description {
-  color: var(--secondary);
+  color: rgb(173, 172, 172);
   font-size: 1.1rem;
   line-height: 1.8;
 }

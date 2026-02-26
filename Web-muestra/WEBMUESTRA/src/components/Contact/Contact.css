@@ -13,9 +13,13 @@
   position: relative;
 }
 
+.contact-info h2{
+  color: white;
+}
+
 .contact-description {
   font-size: 1.2rem;
-  color: var(--secondary);
+  color: rgb(180, 175, 175);
   margin: 1.5rem 0 2rem;
   line-height: 1.8;
 }
@@ -70,7 +74,7 @@
   border-radius: 12px;
   text-align: center;
   font-weight: 500;
-  color: var(--primary);
+  color: gold;
   border: 1px dashed var(--primary);
 }
 

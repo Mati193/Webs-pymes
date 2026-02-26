@@ -16,7 +16,7 @@
   background: transparent;
   border-radius: 50px;
   font-weight: 600;
-  color: var(--secondary);
+  color: rgb(255, 166, 0);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -55,11 +55,11 @@
 
 .project-card h3 {
   margin-bottom: 1rem;
-  color: var(--dark);
+  color: white;
 }
 
 .project-description {
-  color: var(--secondary);
+  color: rgb(172, 169, 169);
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
