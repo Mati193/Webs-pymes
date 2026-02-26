@@ -3,10 +3,23 @@
 /* la barra principal */
 .navbar {
   padding: 0.8rem 1rem;
-  background: linear-gradient(135deg, #1a1e2b 0%, #2d3349 100%) !important;
+  background: linear-gradient(135deg, #1a1e2b 0%, #49422d 100%);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  height: 12%; /* altura inicial fija */
+  overflow: hidden; /* importante */
+
+  display: flex;
+  align-items: center;
+
+  transition: height 0.4s ease;
 }
 
 /* cuando pasas el mouse queda mas sombra, copado */
@@ -14,13 +27,43 @@
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
 }
 
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(90deg, #49422d, #1a1e2b);
+
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.navbar.scrolled::before {
+  opacity: 1;
+}
+
+.navbar.desplazado {
+  height: 80px;
+}
+.navbar.desplazado::before {
+  opacity: 1;
+}
+
+.desplazado-img {
+  width: 80px !important;
+  height: 60px !important;
+}
 /* la foto/logo */
 .img-navbar {
-  width: 120px !important;
-  height: 80px !important;
+  width: 120px;
+  height: 80px;
   margin: 0 10px 0 0;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    height 0.3s ease,
+    width 0.3s ease;
   object-fit: cover;
 }
 
@@ -41,13 +84,13 @@
 
 /* rayita abajo que aparece solita */
 .navbar-brand::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #6c5ce7, #a463f5);
+  background: linear-gradient(90deg, #e7a65c, #f5da63);
   transition: width 0.3s ease;
 }
 
@@ -69,7 +112,7 @@
 
 /* pa que la rayita se vea igual aunque el texto sea transparente */
 .a-navbar::after {
-  background: linear-gradient(90deg, #6c5ce7, #a463f5);
+  background: linear-gradient(90deg, #e7945c, #f5ce63);
 }
 
 /* los botoncitos de navegacion (t1, t2, t3) */
@@ -84,10 +127,10 @@
 
 /* cuando pasas el mouse se re copan los botones */
 .navbar-brand.d-inline-block:hover {
-  background: rgba(108, 92, 231, 0.15);
-  border-color: rgba(108, 92, 231, 0.3);
+  background: rgba(231, 148, 92, 0.15);
+  border-color: rgba(231, 143, 92, 0.3);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(108, 92, 231, 0.2);
+  box-shadow: 0 5px 15px rgba(231, 208, 92, 0.2);
 }
 
 /* pa que entre lindo desde arriba */
