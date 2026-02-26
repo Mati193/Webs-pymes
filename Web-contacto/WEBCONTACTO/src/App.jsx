@@ -5,72 +5,72 @@ import About from "./components/About";
 import Productos from "./components/Productos";
 
 // Constante para función productos Mati
-// const productos = [
-//   ["Pan casero", "Pan de harina integral casero", logo],
-//   [
-//     "Bizcochuelo de chocolate",
-//     "Rico bizcochuelo de chocolate relleno de dulce de leche",
-//     logo,
-//   ],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-//   ["Medialunas", "Medialunas de grasa o manteca", logo],
-// ];
+const productos = [
+  ["Pan casero", "Pan de harina integral casero", logo],
+  [
+    "Bizcochuelo de chocolate",
+    "Rico bizcochuelo de chocolate relleno de dulce de leche",
+    logo,
+  ],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+];
 
 // Constante para funcion productos Tito
-const productos = [
-  {
-    nombre: "Pan artesanal",
-    descripcion: "Pan casero elaborado con fermentación natural.",
-    precio: "$1500",
-  },
-  {
-    nombre: "Medialunas",
-    descripcion: "Medialunas de manteca recién horneadas.",
-    precio: "$800",
-  },
-  {
-    nombre: "Facturas surtidas",
-    descripcion: "Variedad de facturas dulces tradicionales.",
-    precio: "$900",
-  },
-  {
-    nombre: "Chipá",
-    descripcion:
-      "Clásico chipá artesanal, crocante por fuera y suave por dentro.",
-    precio: "$700",
-  },
-  {
-    nombre: "Budines caseros",
-    descripcion: "Budines de limón, naranja y chocolate.",
-    precio: "$2000",
-  },
-];
+// const productos = [
+//   {
+//     nombre: "Pan artesanal",
+//     descripcion: "Pan casero elaborado con fermentación natural.",
+//     precio: "$1500",
+//   },
+//   {
+//     nombre: "Medialunas",
+//     descripcion: "Medialunas de manteca recién horneadas.",
+//     precio: "$800",
+//   },
+//   {
+//     nombre: "Facturas surtidas",
+//     descripcion: "Variedad de facturas dulces tradicionales.",
+//     precio: "$900",
+//   },
+//   {
+//     nombre: "Chipá",
+//     descripcion:
+//       "Clásico chipá artesanal, crocante por fuera y suave por dentro.",
+//     precio: "$700",
+//   },
+//   {
+//     nombre: "Budines caseros",
+//     descripcion: "Budines de limón, naranja y chocolate.",
+//     precio: "$2000",
+//   },
+// ];
 
 function App() {
   return (
