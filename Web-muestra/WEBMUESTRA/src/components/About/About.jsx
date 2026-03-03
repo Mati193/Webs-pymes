@@ -1,11 +1,13 @@
 import React from "react";
 import "./About.css";
+import fotoBenja from "./foto_benja.jpg"
+import fotoMati from "./foto_mati.png"
 
 const About = () => {
   const team = [
     {
       name: "Mateo Benjamin Italiano",
-      img: "",
+      img: fotoBenja,
       role: "Desarrollador Full Stack",
       description:
         "Especialista en React y Node.js. Apasionado por crear soluciones eficientes y escalables.",
@@ -13,7 +15,7 @@ const About = () => {
     },
     {
       name: "Matias Sposetti",
-      img: "",
+      img: fotoMati,
       role: "Diseñador UX/UI & Frontend",
       description:
         "Experto en diseñar experiencias digitales que convierten visitantes en clientes.",
@@ -37,8 +39,7 @@ const About = () => {
         <div className="team-grid">
           {team.map((member, index) => (
             <div key={index} className="team-card">
-              <img src="img/foto trabajo.jpg" alt="" />
-              <div className="member-emoji">{member.emoji}</div>
+              <img src={member.img} alt={member.name} />
               <h3>{member.name}</h3>
               <p className="member-role">{member.role}</p>
               <p className="member-description">{member.description}</p>
