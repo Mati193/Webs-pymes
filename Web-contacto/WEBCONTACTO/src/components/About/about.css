@@ -15,6 +15,8 @@ p {
 }
 
 .contenedor_frase {
+  background-color: #c86514;
+
   height: 200px;
   background: url(https://preview.redd.it/push-push-push-todays-matchup-mundo-v0-f6wej57e0o5f1.jpg?width=1080&crop=smart&auto=webp&s=43eeb9c9ce05e7397cdeeb74cf7568fc76af76f8);
   background-repeat: no-repeat;

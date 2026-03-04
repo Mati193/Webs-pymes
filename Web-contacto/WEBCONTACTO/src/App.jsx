@@ -74,7 +74,7 @@ const productos = [
 
 function App() {
   return (
-    <div>
+    <>
       <NavBar
         marca={"Pan-teon"}
         logo={logo}
@@ -84,7 +84,7 @@ function App() {
       />
       <Bienvenida
         desc={
-          "Pan artesanal recién horneado todos los días.\nTake Away y envíos a domicilio en Río Ceballos."
+          "Pan artesanal recién horneado todos los días. \n Take Away y envíos a domicilio en Río Ceballos."
         }
         marca={"Pan-teon"}
         t1={"Panadería artesanal & pastelería casera"}
@@ -99,7 +99,7 @@ function App() {
         eslogan={"Una seleccion de nuestras más deliciosas especialidades"}
         productos={productos}
       />
-    </div>
+    </>
   );
 }
 
