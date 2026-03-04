@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.css";
 import fotoBenja from "./foto_benja.jpg"
 import fotoMati from "./foto_mati.png"
 
 const About = () => {
+  const [selectedMember, setSelectedMember] = useState(null); // Estado para la card seleccionada
+
   const team = [
     {
       name: "Mateo Benjamin Italiano",
       img: fotoBenja,
       role: "Desarrollador Full Stack",
-      description:
-        "Especialista en React y Node.js. Apasionado por crear soluciones eficientes y escalables.",
-      emoji: "👨‍💻",
+      description: "Especialista en React y Node.js. Apasionado por crear soluciones eficientes y escalables.",
+      emoji: "🌐",
+      bio: "¡Buenas! Soy Mateo, profe de programación. Soy analista de sistemas y desarrollador web. Enseño Python, JavaScript y lógica de programación. Mi filosofía es que se aprende codeando, no mirando. Así que en mis clases se escribe código desde el día 1. Además de programar, soy técnico en armado y reparación de PC. Mi mayor orgullo es haber armado mi propia computadora.",
+      fullRole: "Profesor de Programación",
+      skills: ["Python", "JavaScript", "React", "Node.js", "HTML/CSS"]
     },
     {
       name: "Matias Sposetti",
       img: fotoMati,
       role: "Diseñador UX/UI & Frontend",
-      description:
-        "Experto en diseñar experiencias digitales que convierten visitantes en clientes.",
-      emoji: "🎨",
+      description: "Experto en diseñar experiencias digitales que convierten visitantes en clientes.",
+      emoji: "💻",
+      bio: "Apasionado por el diseño y la experiencia de usuario. Me encanta crear interfaces que no solo se vean bien, sino que también sean intuitivas y funcionales. Trabajo codo a codo con los clientes para entender sus necesidades y transformarlas en experiencias digitales memorables.",
+      fullRole: "Diseñador UX/UI",
+      skills: ["Figma", "Adobe XD", "React", "CSS", "UX Research"]
     },
   ];
 
@@ -38,14 +44,50 @@ const About = () => {
 
         <div className="team-grid">
           {team.map((member, index) => (
-            <div key={index} className="team-card">
-              <img src={member.img} alt={member.name} />
+            <div 
+              key={index} 
+              className="team-card"
+              onClick={() => setSelectedMember(member)} // Al clickear, abre la card
+            >
+              <img src={member.img} alt={member.name}/>
+              <div className="member-emoji">{member.emoji}</div>
               <h3>{member.name}</h3>
               <p className="member-role">{member.role}</p>
               <p className="member-description">{member.description}</p>
+              <p className="member-info">+ Info</p>
             </div>
           ))}
         </div>
+
+        {/* MODAL / CARD FLOTANTE */}
+        {selectedMember && (
+          <div className="member-modal" onClick={() => setSelectedMember(null)}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <button className="modal-close" onClick={() => setSelectedMember(null)}>✕</button>
+              
+              <div className="modal-header">
+                <img src={selectedMember.img} alt={selectedMember.name} />
+                <div>
+                  <h3>{selectedMember.name}</h3>
+                  <p className="modal-role">{selectedMember.fullRole}</p>
+                </div>
+              </div>
+
+              <div className="modal-body">
+                <p className="modal-bio">{selectedMember.bio}</p>
+                
+                <div className="modal-skills">
+                  <h4>Skills</h4>
+                  <div className="skills-tags">
+                    {selectedMember.skills.map((skill, i) => (
+                      <span key={i} className="skill-tag">{skill}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         <div className="about-features">
           <div className="feature-item">
