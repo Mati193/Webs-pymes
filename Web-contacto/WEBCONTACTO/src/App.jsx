@@ -3,6 +3,7 @@ import Bienvenida from "./components/Bienvenida";
 import logo from "./assets/Logo_panteon.jpg";
 import About from "./components/About";
 import Productos from "./components/Productos";
+import Contact from "./components/Contact/Contact"
 
 // Constante para función productos Mati
 const productos = [
@@ -99,6 +100,8 @@ function App() {
         eslogan={"Una seleccion de nuestras más deliciosas especialidades"}
         productos={productos}
       />
+
+      <Contact />
     </>
   );
 }

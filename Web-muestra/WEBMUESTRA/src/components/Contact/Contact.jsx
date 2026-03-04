@@ -73,7 +73,7 @@ const Contact = () => {
               <p>✨ Respondemos en menos de 24hs hábiles</p>
             </div>
           </div>
-
+            
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Nombre y apellido *</label>
