@@ -50,7 +50,7 @@ const Contact = () => {
                 <span className="contact-emoji">📧</span>
                 <div>
                   <h4>Email</h4>
-                  <a href="mailto:hola@pycx.com">hola@pycx.com</a>
+                  <a href="mailto:hola@pycx.com">webpymes.pycx@gmail.com</a>
                 </div>
               </div>
               <div className="contact-item">
@@ -84,7 +84,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                placeholder="Ej: Juan Pérez"
+                placeholder="Ej: Mateo Benjamín Italiano"
               />
             </div>
 

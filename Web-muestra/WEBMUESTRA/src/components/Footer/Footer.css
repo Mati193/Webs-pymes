@@ -1,5 +1,5 @@
 .footer {
-  background: var(--dark);
+
   color: white;
   padding: 4rem 0 2rem;
 }
@@ -15,6 +15,11 @@
   font-size: 2rem;
   color: white;
   margin-bottom: 0.5rem;
+}
+
+.footer-logo img{
+  height: 150px;
+  width: 150px;
 }
 
 .footer-logo p {

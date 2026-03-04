@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import logo from "/public/pycx.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -9,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-logo">
-            <h3>PYCX</h3>
+            <img src="pycx.png" alt="" />
             <p>Soluciones web para PYMES que quieren crecer</p>
           </div>
 
@@ -27,7 +28,7 @@ const Footer = () => {
             <div className="footer-section">
               <h4>Contacto</h4>
               <ul>
-                <li><a href="mailto:hola@pycx.com">hola@pycx.com</a></li>
+                <li><a href="mailto:webpymes.pycx@gmail.com">webpymes.pycx@gmail.com</a></li>
                 <li><a href="https://wa.me/5493512139324">WhatsApp</a></li>
                 <li>Córdoba, Argentina</li>
               </ul>

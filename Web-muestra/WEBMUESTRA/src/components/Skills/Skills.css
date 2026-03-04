@@ -2,6 +2,10 @@
   background: white;
 }
 
+.section-description{
+  color: #b8b8b8;
+}
+
 .skills-grid {
   max-width: 800px;
   margin: 0 auto 3rem;
@@ -56,7 +60,7 @@
   padding: 2rem;
   background: rgba(37, 99, 235, 0.05);
   border-radius: 20px;
-  color: var(--secondary);
+  color: white;
   font-size: 1.1rem;
   line-height: 1.8;
   border: 1px solid rgba(37, 99, 235, 0.1);

@@ -55,13 +55,13 @@
 .nav-menu button {
   background: none;
   border: none;
-  font-size: 1rem;
-  font-weight: 600;
-  color: rgb(255, 217, 0);
+  font-size: 1.2rem;
+  color: rgb(0, 140, 255);
   cursor: pointer;
   position: relative;
   padding: 0.5rem 0;
   transition: all 0.3s ease;
+  font-weight: bold;
 }
 
 /* underline animado desde centro */
