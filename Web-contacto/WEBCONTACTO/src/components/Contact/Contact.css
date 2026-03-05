@@ -1,10 +1,12 @@
 .contact {
   padding: 7rem 1rem;
-  background: radial-gradient(circle at top,#0f172a,#020617);
+  background: linear-gradient(rgba(0, 0, 0, 0.251)), url("fondo-contacto2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   color: white;
+  position: relative;
 }
-
 /* HERO */
 
 .contact-hero h2 {
@@ -14,13 +16,13 @@
 }
 
 .contact-hero h2 span {
-  color: #60a5fa;
+  color: #fbb70a;
 }
 
 .contact-hero p {
   max-width: 600px;
   margin: auto;
-  color: #cbd5e1;
+  color: #e1d6cb;
   font-size: 1.1rem;
 }
 
@@ -35,14 +37,15 @@
 .contact-form {
   width: 100%;
   max-width: 650px;
-  background: white;
+  background: rgb(255, 255, 255);
   padding: 3rem;
   border-radius: 24px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 0 40px 80px rgba(0,0,0,.4);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
   color: black;
+  z-index: 1;
 }
 
 .form-row {
@@ -55,28 +58,28 @@
   width: 100%;
   padding: 1rem;
   border-radius: 12px;
-  border: 2px solid #e2e8f0;
+  border: 2px solid #f0e7e2;
   font-size: 1rem;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #2563eb;
+  border-color: #eb8b25;
 }
 
 /* BUTTON */
 
 .submit-btn {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   padding: 1rem;
-  background: linear-gradient(135deg,#2563eb,#4f46e5);
+  background: linear-gradient(135deg, #eb7b25, #e58646);
   color: white;
   border: none;
   border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .submit-btn:hover {
@@ -91,23 +94,25 @@
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  z-index: 1;
 }
 
 .contact-mini {
-  background: rgba(255,255,255,0.05);
-  padding: .8rem 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem 1.2rem;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
 }
 
 /* MOBILE */
 
-@media(max-width:700px){
-  .form-row{
+@media (max-width: 700px) {
+  .form-row {
     flex-direction: column;
   }
 
-  .contact-hero h2{
-    font-size:2.2rem;
+  .contact-hero h2 {
+    font-size: 2.2rem;
   }
 }

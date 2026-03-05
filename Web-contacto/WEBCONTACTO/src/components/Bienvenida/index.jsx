@@ -8,7 +8,7 @@ import "../global.css";
 function Bienvenida({ logo, marca, eslogan, t1, desc }) {
   return (
     <div className="parent" id="bienvenida">
-      <span className="badge">{t1}</span>
+      <span className="section-badge">{t1}</span>
 
       <h2 className="resaltado">{marca}</h2>
       <img src={logo} alt="logo" className="logo rounded-circle img-fluid" />
