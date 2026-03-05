@@ -58,6 +58,12 @@ const Hero = () => {
                 Soporte directo con los fundadores
               </span>
             </div>
+
+
+            <div className="stat-item">
+              <span className="stat-label">Más de 10 negocios ya trabajan con PYCX para crecer online.
+              </span>
+            </div>
           </div>
         </div>
       </div>

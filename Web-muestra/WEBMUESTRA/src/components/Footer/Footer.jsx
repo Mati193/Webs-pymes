@@ -38,7 +38,7 @@ const Footer = () => {
               <h4>Seguinos</h4>
               <ul>
                 <li><a href="#" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/company/pycx/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                 <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
               </ul>
             </div>

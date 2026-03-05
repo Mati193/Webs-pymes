@@ -8,7 +8,7 @@ const Projects = () => {
     {
       id: 1,
       title: 'EIMA EDUCACION',
-      category: 'ecommerce',
+      category: 'Academias',
       description: 'Automatizamos la venta de cursos online. Ahora venden sin estar pendientes 24/7.',
       result: '+200% en inscripciones online',
       emoji: '📚'
@@ -16,7 +16,7 @@ const Projects = () => {
     {
       id: 2,
       title: 'Panadería PHANTEOM',
-      category: 'panel',
+      category: 'Gastronomias',
       description: 'Panel simple desde el celular para controlar stock y ventas del día. Adiós a las pérdidas.',
       result: 'Ahorro de 10hs semanales',
       emoji: '🥖'
@@ -55,16 +55,16 @@ const Projects = () => {
             Todos
           </button>
           <button 
-            className={`filter-btn ${filter === 'ecommerce' ? 'active' : ''}`}
-            onClick={() => setFilter('ecommerce')}
+            className={`filter-btn ${filter === 'Academias' ? 'active' : ''}`}
+            onClick={() => setFilter('Academias')}
           >
-            E-commerce
+            Academias
           </button>
           <button 
-            className={`filter-btn ${filter === 'panel' ? 'active' : ''}`}
-            onClick={() => setFilter('panel')}
+            className={`filter-btn ${filter === 'Gastronomias' ? 'active' : ''}`}
+            onClick={() => setFilter('Gastronomias')}
           >
-            Paneles
+            Gastronomias
           </button>
           <button 
             className={`filter-btn ${filter === 'landing' ? 'active' : ''}`}
@@ -81,7 +81,8 @@ const Projects = () => {
               <h3>{project.title}</h3>
               <p className="project-description">{project.description}</p>
               <div className="project-result">
-                <span className="result-badge">{project.result}</span>
+                <span className="result-badge">{project.result}</span> <br />
+                <a href="https://eima-educacion.netlify.app/" className='result-badge info'>+ Info</a>
               </div>
             </div>
           ))}
