@@ -1,6 +1,75 @@
-.boton {
+.btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  margin: 10px;
+  transition: all 0.25s ease;
+  border: none;
 }
-.boton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+.claro {
+  background-color: #e6a756 !important;
+  color: #2b1400 !important;
+  border: #b2692d solid !important;
+}
+
+.claro:hover {
+  background-color: #d48b2c !important;
+}
+
+.claro-brand {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+  margin: 0 15px;
+}
+
+.claro-brand::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #000000, #f5da63);
+  transition: width 0.3s ease;
+}
+
+.claro-brand:hover::after {
+  width: 100%;
+}
+
+.oscuro {
+  background-color: #321c09 !important;
+  color: #ff9900 !important;
+  border: #ff7300 solid !important;
+}
+
+.oscuro:hover {
+  background-color: #6a3d17 !important;
+}
+.oscuro-brand {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+  margin: 0 15px;
+}
+
+.oscuro-brand::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #000000, #a95a19);
+  transition: width 0.3s ease;
+}
+
+.oscuro-brand:hover::after {
+  width: 100%;
+}
+
+.oscuro:hover {
 }

@@ -4,10 +4,10 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import "../global.css";
 import "./boton.css";
 
-function Boton({ texto }) {
+function Boton({ texto, tipo }) {
   return (
     <div>
-      <button class="btn btn-warning boton boton">{texto}</button>
+      <button className={`btn ${tipo} ${tipo + "-brand"}`}>{texto}</button>
     </div>
   );
 }

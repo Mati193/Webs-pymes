@@ -33,7 +33,7 @@ const Contact = ({ mail, tel, ubi }) => {
   };
 
   return (
-    <section id="contactos" className="contact section">
+    <section id="contacto" className="contact section">
       {/* HERO */}
       <div className="contact-hero">
         <span className="section-badge">♨️ Contacto</span>

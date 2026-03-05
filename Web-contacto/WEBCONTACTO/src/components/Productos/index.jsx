@@ -17,7 +17,7 @@ function Productos({ eslogan, productos }) {
             <img
               src={producto[2]}
               className="img-productos"
-              alt="Foto de algo rico"
+              alt={producto[0]}
             />
             <div className="card-body">
               <h5 className="card-title">{producto[0]}</h5>

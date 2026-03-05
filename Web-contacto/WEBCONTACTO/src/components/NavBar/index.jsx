@@ -48,7 +48,7 @@ function NavBar({ logo, marca, t1, t2, t3 }) {
           <a className="navbar-brand d-inline-block align" href="#productos">
             {t2}
           </a>
-          <a className="navbar-brand d-inline-block align " href="#contactos">
+          <a className="navbar-brand d-inline-block align " href="#contacto">
             {t3}
           </a>
         </div>

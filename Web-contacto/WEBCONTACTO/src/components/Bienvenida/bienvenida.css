@@ -131,3 +131,9 @@ h5 {
   color: #f3e3c9;
   line-height: 1.6;
 }
+
+.botonera {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}

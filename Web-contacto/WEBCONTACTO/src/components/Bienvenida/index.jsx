@@ -16,7 +16,14 @@ function Bienvenida({ logo, marca, eslogan, t1, desc }) {
       <h4>{eslogan}</h4>
 
       <h5>{desc}</h5>
-      <Boton texto={"Nuestros productos"} />
+      <div className="botonera">
+        <a href="#productos">
+          <Boton texto={"Nuestros productos"} tipo={"claro"} />
+        </a>
+        <a href="#contacto">
+          <Boton texto={"Pedir ahora!"} tipo={"oscuro"} />
+        </a>
+      </div>
     </div>
   );
 }
