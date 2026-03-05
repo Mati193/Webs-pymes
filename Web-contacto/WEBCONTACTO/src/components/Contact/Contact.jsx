@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "./Contact.css";
 
-const Contact = () => {
+const Contact = ({ mail, tel, ubi }) => {
   const [formData, setFormData] = useState({
     name: "",
-    business: "",
-    email: "",
+    phone: "",
     message: "",
   });
 
@@ -26,8 +25,7 @@ const Contact = () => {
       alert("¡Mensaje enviado! Te respondemos dentro de 24hs.");
       setFormData({
         name: "",
-        business: "",
-        email: "",
+        phone: "",
         message: "",
       });
       setSending(false);
@@ -35,27 +33,24 @@ const Contact = () => {
   };
 
   return (
-    <section id="contactos" className="contact section">
-
+    <section id="contacto" className="contact section">
       {/* HERO */}
       <div className="contact-hero">
-        <span className="section-badge">🚀 Contacto</span>
-
+        <span className="section-badge">♨️ Contacto</span>
         <h2>
-          Contanos tu idea <br />
-          <span>y la hacemos realidad</span>
+          Escribinos para
+          <br />
+          <span>hacer tu pedido!</span>
         </h2>
 
         <p>
-          Diseñamos webs que venden. Enviános tu proyecto y recibí
-          una propuesta clara en menos de 24hs.
+          Contanos qué te gustaría y lo preparamos especialmente para vos 🍞.
         </p>
       </div>
 
       {/* FORM CENTER */}
       <div className="contact-center">
         <form className="contact-form" onSubmit={handleSubmit}>
-
           <div className="form-row">
             <input
               type="text"
@@ -65,22 +60,13 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
-
-            <input
-              type="text"
-              name="business"
-              placeholder="Nombre del negocio"
-              value={formData.business}
-              onChange={handleChange}
-              required
-            />
           </div>
 
           <input
-            type="email"
-            name="email"
-            placeholder="Email de contacto"
-            value={formData.email}
+            type="tel"
+            name="phone"
+            placeholder="Telefono de contacto"
+            value={formData.phone}
             onChange={handleChange}
             required
           />
@@ -95,24 +81,18 @@ const Contact = () => {
           />
 
           <button className="submit-btn" disabled={sending}>
-            {sending ? "Enviando..." : "Enviar mensaje 🚀"}
+            {sending ? "Enviando..." : "Enviar mensaje 👩🏻‍🍳"}
           </button>
         </form>
       </div>
 
       {/* CONTACT FOOTER INFO */}
       <div className="contact-footer">
-        <div className="contact-mini">
-          📧 webpymes.pycx@gmail.com
-        </div>
+        <div className="contact-mini">📧 {mail}</div>
 
-        <div className="contact-mini">
-          📱 +54 9 351 213-9324
-        </div>
+        <div className="contact-mini">📱 +54 9 {tel}</div>
 
-        <div className="contact-mini">
-          📍 Córdoba, Argentina
-        </div>
+        <div className="contact-mini">📍 {ubi}</div>
       </div>
     </section>
   );

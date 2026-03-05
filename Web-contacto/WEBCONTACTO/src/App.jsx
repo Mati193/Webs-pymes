@@ -3,7 +3,7 @@ import Bienvenida from "./components/Bienvenida";
 import logo from "./assets/Logo_panteon.jpg";
 import About from "./components/About";
 import Productos from "./components/Productos";
-import Contact from "./components/Contact/Contact"
+import Contact from "./components/Contact/Contact";
 
 // Constante para función productos Mati
 const productos = [
@@ -88,7 +88,7 @@ function App() {
           "Pan artesanal recién horneado todos los días. \n Take Away y envíos a domicilio en Río Ceballos."
         }
         marca={"Pan-teon"}
-        t1={"Panadería artesanal & pastelería casera"}
+        t1={"🥧 Panadería artesanal & pastelería casera"}
         eslogan={"Sabor casero que se siente en cada bocado"}
         logo={logo}
       />
@@ -101,7 +101,11 @@ function App() {
         productos={productos}
       />
 
-      <Contact />
+      <Contact
+        mail={"panteon_panificadora@gmail.com"}
+        tel={" 1234567890"}
+        ubi={"Río ceballos, Argentina"}
+      />
     </>
   );
 }

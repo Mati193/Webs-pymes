@@ -10,22 +10,37 @@
   }
 }
 
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .badge {
-  background: rgba(235, 146, 37, 0.712);
-  color: rgb(14, 6, 0);
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
+  background: rgba(235, 146, 37, 0.85);
+  color: #2b1400;
+  padding: 0.5rem 1.2rem;
+  border-radius: 40px;
   font-weight: 600;
-  font-size: 0.9rem;
-  backdrop-filter: blur(5px);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
 
   position: absolute;
-  top: 130px;
+  top: 140px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .parent {
   min-height: 100vh;
   width: 100%;
+  gap: 1rem;
 
   display: flex;
   flex-direction: column;
@@ -33,26 +48,22 @@
   justify-content: center;
 
   text-align: center;
-  /* padding-top: 120px; */
 
-  background-image: url("/fondo-panteon2.avif");
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.181), rgba(0, 0, 0, 0.253)),
+    url("/fondo-panteon2.avif");
+
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.parent::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.375); /* ← intensidad */
-  z-index: 0;
+  background-position: center;
 }
 
 .logo {
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  animation: floatLogo 6s ease-in-out infinite;
 }
 
 .gradient-orb {
@@ -89,13 +100,12 @@
   transform: translate(-50%, -50%);
   animation-delay: -10s;
 }
-
 .resaltado {
   color: #f6c377;
-  position: relative;
-  display: inline-block;
   font-weight: bold;
   font-size: 70px;
+  letter-spacing: 2px;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
 .resaltado::after {
@@ -109,8 +119,21 @@
   z-index: -1;
 }
 
-h4,
+h4 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: #ffd9a3;
+}
+
 h5 {
-  z-index: 1;
-  color: wheat;
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: #f3e3c9;
+  line-height: 1.6;
+}
+
+.botonera {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
