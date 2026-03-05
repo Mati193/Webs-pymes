@@ -43,6 +43,9 @@ const Navbar = () => {
             <button onClick={() => scrollToSection("about")}>Nosotros</button>
           </li>
           <li>
+            <button onClick={() => scrollToSection("como-trabajamos")}>¿Como Trabajamos?</button>
+          </li>
+          <li>
             <button onClick={() => scrollToSection("projects")}>
               Proyectos
             </button>

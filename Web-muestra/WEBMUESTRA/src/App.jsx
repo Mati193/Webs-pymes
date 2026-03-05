@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar/Navbar.jsx'  // <-- Ruta completa
 import Hero from './components/Hero/Hero.jsx'
 import About from './components/About/About.jsx'
+import Work from './components/Work/Work.jsx'
 import Projects from './components/Projects/Projects.jsx'
 import Skills from './components/Skills/Skills.jsx'
 import Contact from './components/Contact/Contact.jsx'
@@ -15,6 +16,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Work />
         <Projects />
         <Skills />
         <Contact />
