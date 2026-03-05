@@ -23,8 +23,8 @@
 }
 
 .badge {
-  background: rgba(235, 146, 37, 0.85);
-  color: #2b1400;
+  background: var(--primary-600);
+  color: var(--secondary-800);
   padding: 0.5rem 1.2rem;
   border-radius: 40px;
   font-weight: 600;
@@ -66,69 +66,24 @@
   animation: floatLogo 6s ease-in-out infinite;
 }
 
-.gradient-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.4;
-  animation: float 20s infinite;
-}
-
-.orb-1 {
-  width: 500px;
-  height: 500px;
-  background: #bfb115;
-  top: -200px;
-  left: -200px;
-}
-
-.orb-2 {
-  width: 400px;
-  height: 400px;
-  background: #d9b162;
-  bottom: -200px;
-  right: -200px;
-  animation-delay: -5s;
-}
-
-.orb-3 {
-  width: 300px;
-  height: 300px;
-  background: #f2a766;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation-delay: -10s;
-}
 .resaltado {
-  color: #f6c377;
+  color: var(--color-primary-light);
   font-weight: bold;
   font-size: 70px;
   letter-spacing: 2px;
   text-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
-.resaltado::after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background: rgba(255, 149, 0, 0.2);
-  z-index: -1;
-}
-
 h4 {
   font-size: 1.8rem;
   margin-top: 10px;
-  color: #ffd9a3;
+  color: var(--color-secondary-dark);
 }
 
 h5 {
   max-width: 600px;
   font-size: 1.1rem;
-  color: #f3e3c9;
+  color: var(--primary-100);
   line-height: 1.6;
 }
 

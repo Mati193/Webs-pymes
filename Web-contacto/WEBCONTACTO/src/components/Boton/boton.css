@@ -7,13 +7,14 @@
 }
 
 .claro {
-  background-color: #e6a756 !important;
-  color: #2b1400 !important;
-  border: #b2692d solid !important;
+  background-color: var(--color-primary-light) !important;
+  color: var(--secondary-800) !important;
+  border: var(--primary-600) solid !important;
+  transition: all 0.5s ease-in;
 }
 
 .claro:hover {
-  background-color: #d48b2c !important;
+  background-color: var(--primary-500) !important;
 }
 
 .claro-brand {
@@ -31,7 +32,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #000000, #f5da63);
+  background: linear-gradient(90deg, #000000, var(--color-tertiary-light));
   transition: width 0.3s ease;
 }
 
@@ -40,13 +41,13 @@
 }
 
 .oscuro {
-  background-color: #321c09 !important;
-  color: #ff9900 !important;
-  border: #ff7300 solid !important;
+  background-color: var(--secondary-800) !important;
+  color: var(--color-tertiary) !important;
+  border: var(--secondary-700) solid !important;
 }
 
 .oscuro:hover {
-  background-color: #6a3d17 !important;
+  background-color: var(--color-secondary-dark) !important;
 }
 .oscuro-brand {
   font-weight: 500;
@@ -63,13 +64,10 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #000000, #a95a19);
+  background: linear-gradient(90deg, #000000, var(--color-primary-dark));
   transition: width 0.3s ease;
 }
 
 .oscuro-brand:hover::after {
   width: 100%;
-}
-
-.oscuro:hover {
 }

@@ -1,6 +1,6 @@
 /* ===== SECCION GENERAL ===== */
 .fondo {
-  background: linear-gradient(180deg, #f47615, #e86810);
+  background: linear-gradient(180deg, var(--bg-main));
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -12,12 +12,12 @@
 .titulos h2 {
   font-size: 2.2rem;
   margin-bottom: 10px;
-  color: #612c06;
+  color: var(--color-secondary-dark);
 }
 
 .titulos h5 {
   font-weight: normal;
-  color: #f6d9be;
+  color: var(--text-light);
   margin-bottom: 40px;
   margin: auto;
   margin-bottom: 50px;
@@ -34,7 +34,7 @@
 /* ===== CARD ===== */
 .card {
   width: 260px;
-  background: rgb(114, 70, 28);
+  background: var(--bg-card);
   border-radius: 12px;
   overflow: hidden;
   position: relative;
@@ -91,10 +91,10 @@
 .card-title {
   font-size: 1.3rem;
   margin-bottom: 8px;
-  color: #ffffff;
+  color: var(--text-light);
 }
 
 .card-text {
   font-size: 0.95rem;
-  color: #bdb8b8;
+  color: var(--text-muted);
 }

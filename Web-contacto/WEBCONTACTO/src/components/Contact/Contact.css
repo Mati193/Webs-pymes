@@ -16,13 +16,13 @@
 }
 
 .contact-hero h2 span {
-  color: #fbb70a;
+  color: var(--secondary-700);
 }
 
 .contact-hero p {
   max-width: 600px;
   margin: auto;
-  color: #e1d6cb;
+  color: var(--text-light);
   font-size: 1.1rem;
 }
 
@@ -58,14 +58,14 @@
   width: 100%;
   padding: 1rem;
   border-radius: 12px;
-  border: 2px solid #f0e7e2;
+  border: 2px solid var(--primary-400);
   font-size: 1rem;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #eb8b25;
+  border-color: var(--primary-400);
 }
 
 /* BUTTON */
@@ -73,7 +73,7 @@
 .submit-btn {
   margin-top: 0.5rem;
   padding: 1rem;
-  background: linear-gradient(135deg, #eb7b25, #e58646);
+  background: linear-gradient(135deg, var(--color-primary), var(--primary-600));
   color: white;
   border: none;
   border-radius: 12px;
