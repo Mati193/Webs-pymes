@@ -35,7 +35,7 @@ const About = () => {
         <div className="section-header">
           <span className="section-badge">🌟 Quiénes somos</span>
           <h2>Dos apasionados por ayudar a PYMES a crecer</h2>
-          <p className="section-description">
+          <p className="section-description margen">
             En PYCX combinamos tecnología y diseño para crear webs que realmente
             funcionan. Nos encanta trabajar codo a codo con nuestros clientes
             para entender sus necesidades.

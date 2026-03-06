@@ -1,5 +1,6 @@
-.como-trabajamos{
+.como-trabajamos {
   background-color: #0f172a;
+  height: 100vh;
 }
 
 /* ========================= */
@@ -15,12 +16,18 @@
   margin: 0;
 }
 
-.section-header{
+.section-badge.proceso {
   margin-top: 100px;
 }
 
+.section-header {
+  margin-bottom: 30px;
+}
 
+/* 
 .cursos-slider-container::-webkit-scrollbar {
+    display: none;
+
   height: 8px;
 }
 
@@ -32,11 +39,30 @@
 .cursos-slider-container::-webkit-scrollbar-thumb {
   background: #2563eb;
   border-radius: 10px;
+} */
+
+.cursos-slider-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 2rem 0 3rem;
+  margin: 0;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  /* ocultar scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cursos-slider-container::-webkit-scrollbar {
+  display: none;
 }
 
 .cursos-slider {
   display: flex;
-  gap: 4rem;
+  gap: 1rem;
+  /* Cambiado de 4rem a 1rem */
   padding: 0 1rem;
   min-width: min-content;
 }
@@ -50,6 +76,7 @@
   box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 450px;
 }
 
 .curso-card:hover {
@@ -168,44 +195,168 @@
 }
 
 .proceso-cta {
-    margin-left: 25%;
-    width: 50%;
-    text-align: center;
-    margin-top: 3rem;
-    padding: 2.5rem;
-    background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
-    border-radius: 50px;
-    border: 1px solid rgba(37, 99, 235, 0.1);
+  margin-left: 25%;
+  width: 50%;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+  border-radius: 50px;
+  border: 1px solid rgba(37, 99, 235, 0.1);
 }
 
 .proceso-cta p {
-    font-size: 1.3rem;
-    color: #0f172a;
-    margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
 }
 
 .proceso-cta strong {
-    color: #2563eb;
-    font-weight: 700;
+  color: #2563eb;
+  font-weight: 700;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background: linear-gradient(135deg, #2563eb, #1e40af);
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px -8px rgba(37, 99, 235, 0.5);
-    border: none;
-    cursor: pointer;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px -8px rgba(37, 99, 235, 0.5);
+  border: none;
+  cursor: pointer;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px -8px #1e3a8a;
-    background: linear-gradient(135deg, #1e40af, #1e3a8a);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px -8px #1e3a8a;
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
 }
+
+
+/* ========================= */
+/* BOTONES DEL SLIDER - AGREGADO */
+/* ========================= */
+
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  /* espacio entre botones y slider */
+  margin: 0;
+}
+
+.slider-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #2563eb;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+  border: 2px solid transparent;
+}
+
+.slider-btn:hover {
+  background: #2563eb;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+.slider-btn:active {
+  transform: scale(0.95);
+}
+
+.gratis-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+
+/* ========================= */
+/* AJUSTE PARA 3 CARDS - REEMPLAZÁ LAS PARTES CORRESPONDIENTES */
+/* ========================= */
+
+.cursos-slider-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 2rem 0 3rem;
+  margin: 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cursos-slider {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+  /* Esto fuerza que el slider tenga el ancho justo para todas las cards */
+  width: max-content;
+  min-width: 100%;
+}
+
+/* Cards */
+.curso-card {
+  flex: 0 0 320px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 450px;
+}
+
+
+/* Centrar el wrapper */
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem auto;
+  max-width: 100%;
+}
+
+
+
+
+
+

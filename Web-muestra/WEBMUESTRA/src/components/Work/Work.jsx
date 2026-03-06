@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Work.css';
 
 const ComoTrabajamos = () => {
+  const sliderRef = useRef(null);
+
   const pasos = [
     {
       numero: "1",
@@ -40,58 +42,87 @@ const ComoTrabajamos = () => {
     }
   ];
 
+const scroll = (direction) => {
+  if (sliderRef.current) {
+    const container = sliderRef.current;
+    const cardWidth = 336; // 320px + 16px de gap
+    const currentScroll = container.scrollLeft;
+    
+    let newScrollLeft;
+    if (direction === 'left') {
+      newScrollLeft = currentScroll - cardWidth * 3;
+    } else {
+      newScrollLeft = currentScroll + cardWidth * 3;
+    }
+    
+    container.scrollTo({
+      left: newScrollLeft,
+      behavior: 'smooth'
+    });
+  }
+};
+
   return (
     <section className="como-trabajamos" id="como-trabajamos">
       <div className="container">
         {/* Header */}
         <div className="section-header">
-          <span className="section-badge">⚙️ Nuestro proceso</span>
+          <span className="section-badge proceso">⚙️ Nuestro proceso</span>
           <h2>Así trabajamos para que vendas más</h2>
           <p className="section-description">
-            No hacemos magia, hacemos un proceso claro. Las PYMES como la tuya necesitan saber 
+            No hacemos magia, hacemos un proceso claro. Las PYMES como la tuya necesitan saber
             qué va a pasar con su negocio. Te lo contamos paso a paso.
           </p>
         </div>
 
-        {/* SLIDER CONTAINER - Adaptado del código que me pasaste */}
-        <div className="cursos-slider-container">
-          <div className="cursos-slider" id="cursosSlider">
-            {pasos.map((paso, index) => (
-              <div key={index} className="curso-card">
-                {/* HEADER con el colorcito */}
-                <div className="curso-header" style={{ background: paso.color }}>
-                  <span className="curso-categoria">Paso {paso.numero}</span>
-                  <h3 className="curso-titulo">{paso.titulo}</h3>
-                  {paso.numero === "1"}
-                  {paso.numero === "5" && <span className="curso-badge trending">Siempre</span>}
-                </div>
+        {/* Slider con botones */}
+        <div className="slider-wrapper">
+          <button
+            className="slider-btn slider-btn-left"
+            onClick={() => scroll('left')}
+            aria-label="Anterior"
+          >
+            <i className="fas fa-chevron-left"></i>
+          </button>
 
-                {/* CONTENIDO */}
-                <div className="curso-contenido">
-                  <p className="curso-descripcion">{paso.descripcion}</p>
-                  
-                  <div className="curso-info">
-                    <span><i className="far fa-clock"></i> {paso.icono} {paso.titulo}</span>
-                    <span><i className="fas fa-users"></i> Personalizado</span>
-                    <span><i className="fas fa-signal"></i> Sin cargo extra</span>
+          <div className="cursos-slider-container" ref={sliderRef}>
+            <div className="cursos-slider" id="cursosSlider">
+              {pasos.map((paso, index) => (
+                <div key={index} className="curso-card">
+                  <div className="curso-header" style={{ background: paso.color }}>
+                    <span className="curso-categoria">Paso {paso.numero}</span>
+                    <h3 className="curso-titulo">{paso.titulo}</h3>
+                    {paso.numero === "5" && <span className="curso-badge trending">Siempre</span>}
                   </div>
 
-                  <div className="curso-footer">
-                    <a href={`#paso-${paso.numero}`} className="btn-ver-curso">
-                      Ver paso <i className="fas fa-arrow-right"></i>
-                    </a>
+                  <div className="curso-contenido">
+                    <p className="curso-descripcion">{paso.descripcion}</p>
+
+                    <div className="curso-info">
+                      <span><i className="fas fa-check-circle"></i> {paso.icono} {paso.titulo}</span>
+                      <span><i className="fas fa-users"></i> Personalizado</span>
+                      {paso.numero === "1" && <span className="gratis-badge">✨ Sin cargo</span>}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
+          <button
+            className="slider-btn slider-btn-right"
+            onClick={() => scroll('right')}
+            aria-label="Siguiente"
+          >
+            <i className="fas fa-chevron-right"></i>
+          </button>
         </div>
 
-        {/* CTA */}
+        {/* CTA
         <div className="proceso-cta">
           <p>Agendá tu <strong><span className='highlight'>TURNO</span></strong> para el diagnóstico gratuito</p>
           <a href="#contact" className="cta-button">Quiero mi diagnóstico</a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
