@@ -20,13 +20,25 @@ function About({ titulo, presentacion, frase }) {
       titulo: "Ingredientes de calidad",
       description:
         "Seleccionamos cuidadosamente nuestras materias primas para asegurar productos frescos, naturales y de excelente calidad.",
-      emoji: <i class="fa-regular fa-star"></i>,
+      emoji: <i class="fa-solid fa-star"></i>,
     },
     {
       titulo: "Horneado diario",
       description:
         "Nuestros panes y especialidades se hornean todos los días para ofrecer siempre productos recién hechos.",
       emoji: <i class="fa-solid fa-calendar-check"></i>,
+    },
+    {
+      titulo: "Creatividad en recetas",
+      description:
+        "Combinamos tradición con innovación para ofrecer nuevas variedades de panes y productos que sorprendan a nuestros clientes.",
+      emoji: <i class="fa-solid fa-paintbrush"></i>,
+    },
+    {
+      titulo: "Compromiso con el sabor",
+      description:
+        "Cada receta está pensada para resaltar el sabor auténtico del pan artesanal, manteniendo siempre nuestro estándar de calidad.",
+      emoji: <i class="fa-solid fa-handshake"></i>,
     },
   ];
   const team = [

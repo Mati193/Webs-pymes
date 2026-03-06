@@ -92,3 +92,9 @@ h5 {
   width: 100%;
   justify-content: center;
 }
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
