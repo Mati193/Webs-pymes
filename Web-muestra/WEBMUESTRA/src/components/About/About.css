@@ -9,10 +9,9 @@
   color: white;
 }
 
-
 .section-badge {
   display: inline-block;
-  background: #04386B;
+  background: #04386b;
   color: rgb(255, 255, 255);
   padding: 0.5rem 1.2rem;
   border-radius: 50px;
@@ -29,7 +28,7 @@
   margin-top: 1rem;
 }
 
-.section-description.margen{
+.section-description.margen {
   margin-bottom: 100px;
 }
 
@@ -103,7 +102,7 @@
   font-size: 0.95rem;
 }
 
-.member-info{
+.member-info {
   color: var(--primary);
   font-weight: 600;
   font-size: 0.95rem;

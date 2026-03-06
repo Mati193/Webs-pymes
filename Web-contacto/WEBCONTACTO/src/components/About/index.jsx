@@ -3,6 +3,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./about.css";
 import "../global.css";
 import Card from "../Card/index.jsx";
+import PerfilCard from "../Perfil-Card/index.jsx";
 <script
   src="https://kit.fontawesome.com/7345c2bc7b.js"
   crossorigin="anonymous"
@@ -28,9 +29,35 @@ function About({ titulo, presentacion, frase }) {
       emoji: <i class="fa-solid fa-calendar-check"></i>,
     },
   ];
+  const team = [
+    {
+      name: "Mateo",
+      img: "hola",
+      role: "Maestro Panadero",
+      description:
+        "Alma detrás de los hornos de Panteón. se encarga de seleccionar cuidadosamente cada ingrediente, respetando tiempos de fermentación y procesos que garantizan sabor, textura y calidad en cada pieza de pan.",
+      emoji: "👨‍🍳",
+      bio: "Hacer pan no es solo un oficio: es una forma de conectar con las personas a través de algo simple y esencial. Mi objetivo es que cada cliente que pruebe los productos de Panteón sienta el sabor auténtico del pan hecho con dedicación.",
+      fullRole: "Maestro Panadero",
+      skills: ["Sabor", "Textura", "Calidad"],
+    },
+    {
+      name: "Sofía",
+      img: "hola",
+      role: "Encargada de Experiencia y Atención",
+      description:
+        "Encargada de la atención al cliente. A cargo de la atención al cliente, la organización del local y la coordinación del día a día para que todo funcione de manera armoniosa.",
+      emoji: "👩‍💼",
+      bio: "Me apasiona crear una experiencia cálida y cercana, donde cada cliente pueda descubrir los productos artesanales de la panadería y encontrar algo que le guste. Gracias a mi atención al detalle y trato amable, convierto cada visita a Panteón en un momento agradable, donde el aroma del pan recién horneado y la buena atención van de la mano.",
+      fullRole: "Encargada de Experiencia y Atención",
+      skills: ["Organización", "Gestion", "Atención", "Orden"],
+    },
+  ];
   return (
     <section id="about" className="contenedor">
-      <div className="personal"></div>
+      <div className="personal">
+        <PerfilCard team={team} />
+      </div>
       <div className="skills">
         <Card contenido={skills} />
       </div>
