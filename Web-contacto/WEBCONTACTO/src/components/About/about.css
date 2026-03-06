@@ -1,6 +1,8 @@
 .contenedor {
+  display: flex;
   background-color: var(--color-primary-dark);
   text-align: center;
+  justify-content: center;
   height: 70vh;
   padding: 50px;
 }
