@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./About.css";
-import fotoBenja from "./foto_benja.jpg"
-import fotoMati from "./foto_mati.png"
+import fotoBenja from "./foto_benja.jpg";
+import fotoMati from "./foto_mati.png";
 
 const About = () => {
   const [selectedMember, setSelectedMember] = useState(null); // Estado para la card seleccionada
@@ -11,21 +11,23 @@ const About = () => {
       name: "Mateo Benjamin Italiano",
       img: fotoBenja,
       role: "Desarrollador Full Stack",
-      description: "Especialista en React y Node.js. Apasionado por crear soluciones eficientes y escalables.",
+      description:
+        "Especialista en React y Node.js. Apasionado por crear soluciones eficientes y escalables.",
       emoji: "🌐",
       bio: "¡Buenas! Soy Mateo, profe de programación. Soy analista de sistemas y desarrollador web. Enseño Python, JavaScript y lógica de programación. Mi filosofía es que se aprende codeando, no mirando. Así que en mis clases se escribe código desde el día 1. Además de programar, soy técnico en armado y reparación de PC. Mi mayor orgullo es haber armado mi propia computadora.",
       fullRole: "Profesor de Programación",
-      skills: ["Python", "JavaScript", "React", "Node.js", "HTML/CSS"]
+      skills: ["Python", "JavaScript", "React", "Node.js", "HTML/CSS"],
     },
     {
-      name: "Matias Sposetti",
+      name: "Matías Sposetti",
       img: fotoMati,
-      role: "Diseñador UX/UI & Frontend",
-      description: "Experto en diseñar experiencias digitales que convierten visitantes en clientes.",
+      role: "Desarrollador Full Stack",
+      description:
+        "Experto en diseñar experiencias digitales que convierten visitantes en clientes.",
       emoji: "💻",
-      bio: "Apasionado por el diseño y la experiencia de usuario. Me encanta crear interfaces que no solo se vean bien, sino que también sean intuitivas y funcionales. Trabajo codo a codo con los clientes para entender sus necesidades y transformarlas en experiencias digitales memorables.",
+      bio: "Soy Matías! El encargado de la UI. Soy un analista en sistemas egresado de la FaMAF, cuento con excepcionales habilidades para encontrar tu producto ideal, diseñarlo y darle vida. La seguridad, fiabilidad y flexibilidad de tu producto serán siempre mi prioridad!",
       fullRole: "Diseñador UX/UI",
-      skills: ["Figma", "Adobe XD", "React", "CSS", "UX Research"]
+      skills: ["Typescript", "JavaScript", "React", "CSS", "UX Research", "C"],
     },
   ];
 
@@ -44,12 +46,12 @@ const About = () => {
 
         <div className="team-grid">
           {team.map((member, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="team-card"
               onClick={() => setSelectedMember(member)} // Al clickear, abre la card
             >
-              <img src={member.img} alt={member.name}/>
+              <img src={member.img} alt={member.name} />
               <div className="member-emoji">{member.emoji}</div>
               <h3>{member.name}</h3>
               <p className="member-role">{member.role}</p>
@@ -63,8 +65,13 @@ const About = () => {
         {selectedMember && (
           <div className="member-modal" onClick={() => setSelectedMember(null)}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <button className="modal-close" onClick={() => setSelectedMember(null)}>✕</button>
-              
+              <button
+                className="modal-close"
+                onClick={() => setSelectedMember(null)}
+              >
+                ✕
+              </button>
+
               <div className="modal-header">
                 <img src={selectedMember.img} alt={selectedMember.name} />
                 <div>
@@ -75,12 +82,14 @@ const About = () => {
 
               <div className="modal-body">
                 <p className="modal-bio">{selectedMember.bio}</p>
-                
+
                 <div className="modal-skills">
                   <h4>Skills</h4>
                   <div className="skills-tags">
                     {selectedMember.skills.map((skill, i) => (
-                      <span key={i} className="skill-tag">{skill}</span>
+                      <span key={i} className="skill-tag">
+                        {skill}
+                      </span>
                     ))}
                   </div>
                 </div>
