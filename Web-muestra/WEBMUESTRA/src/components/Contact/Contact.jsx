@@ -20,7 +20,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setSending(true)
-    
+
     // Simular envío (después conectás con tu backend)
     setTimeout(() => {
       alert('¡Gracias por contactarnos! Te responderemos en menos de 24hs.')
@@ -42,9 +42,9 @@ const Contact = () => {
             <span className="section-badge">📞 Hablemos</span>
             <h2>¿Listo para llevar tu negocio al próximo nivel?</h2>
             <p className="contact-description">
-            **Contanos qué necesitas y te enviaremos una propuesta simple y sin compromiso en menos de 24hs.**
+              **Contanos qué necesitas y te enviaremos una propuesta simple y sin compromiso en menos de 24hs.**
             </p>
-            
+
             <div className="contact-details">
               <div className="contact-item">
                 <span className="contact-emoji">📧</span>
@@ -71,9 +71,11 @@ const Contact = () => {
 
             <div className="social-proof">
               <p>✨ Respondemos en menos de 24hs hábiles</p>
+
             </div>
           </div>
-            
+
+
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Nombre y apellido *</label>
@@ -127,8 +129,8 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className="btn btn-primary submit-btn"
               disabled={sending}
             >

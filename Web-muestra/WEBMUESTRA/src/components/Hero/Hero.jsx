@@ -6,6 +6,9 @@ const Hero = () => {
     <section id="hero" className="hero">
       <div className="container">
         <div className="hero-content">
+          {/* <h1 className="seo-title">
+            PYCX - Desarrollo web para PYMES en Argentina
+          </h1> */}
           <span className="hero-badge">
             🚀 PYCX - Soluciones Web para PYMES
           </span>
@@ -67,7 +70,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

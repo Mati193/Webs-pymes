@@ -10,18 +10,18 @@ const About = () => {
     {
       name: "Mateo Benjamin Italiano",
       img: fotoBenja,
-      role: "Desarrollador Full Stack",
+      role: "Desarrollador Full Stack | Cofundador de PYCX",
       description:
         "Especialista en React y Node.js. Apasionado por crear soluciones eficientes y escalables.",
       emoji: "🌐",
-      bio: "¡Buenas! Soy Mateo, profe de programación. Soy analista de sistemas y desarrollador web. Enseño Python, JavaScript y lógica de programación. Mi filosofía es que se aprende codeando, no mirando. Así que en mis clases se escribe código desde el día 1. Además de programar, soy técnico en armado y reparación de PC. Mi mayor orgullo es haber armado mi propia computadora.",
-      fullRole: "Profesor de Programación",
+      bio: "¡Buenas! Soy Mateo Benjamín Italiano, desarrollador web y profesor de programación. Me especializo en desarrollo Full Stack utilizando JavaScript, React y Node.js. También soy analista de sistemas y técnico en armado y reparación de computadoras. En mis clases enseño Python, JavaScript y lógica de programación desde un enfoque práctico: aprender programando desde el primer día. Soy cofundador de PYCX, una iniciativa dedicada al desarrollo de plataformas web y soluciones digitales modernas.",
+      fullRole: "Profesor de Programación y Desarrollador Web",
       skills: ["Python", "JavaScript", "React", "Node.js", "HTML/CSS"],
     },
     {
       name: "Matías Sposetti",
       img: fotoMati,
-      role: "Desarrollador Full Stack",
+      role: "Desarrollador Full Stack | Cofundador de PYCX",
       description:
         "Experto en diseñar experiencias digitales que convierten visitantes en clientes.",
       emoji: "💻",
@@ -38,10 +38,15 @@ const About = () => {
           <span className="section-badge">🌟 Quiénes somos</span>
           <h2>Dos apasionados por ayudar a PYMES a crecer</h2>
           <p className="section-description margen">
-            En PYCX combinamos tecnología y diseño para crear webs que realmente
-            funcionan. Nos encanta trabajar codo a codo con nuestros clientes
-            para entender sus necesidades.
+            En PYCX creamos páginas web modernas que ayudan a negocios a crecer online.
+            Combinamos tecnología, diseño y estrategia para que tu web no solo se vea bien, sino que consiga clientes.
+            <br />
+            <span className="stat-label largo">
+              Especialistas en páginas web para PYMES de Argentina.
+            </span>
           </p>
+
+
         </div>
 
         <div className="team-grid">
@@ -51,7 +56,10 @@ const About = () => {
               className="team-card"
               onClick={() => setSelectedMember(member)} // Al clickear, abre la card
             >
-              <img src={member.img} alt={member.name} />
+              <img
+                src={member.img}
+                alt={`${member.name} miembro del equipo PYCX desarrollador web`}
+              />
               <div className="member-emoji">{member.emoji}</div>
               <h3>{member.name}</h3>
               <p className="member-role">{member.role}</p>
@@ -123,7 +131,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

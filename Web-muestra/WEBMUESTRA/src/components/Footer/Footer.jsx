@@ -12,6 +12,7 @@ const Footer = () => {
           <div className="footer-logo">
             <img src="pycx.png" alt="" />
             <p>Soluciones web para PYMES que quieren crecer</p>
+
           </div>
 
           <div className="footer-links">
@@ -41,13 +42,28 @@ const Footer = () => {
                 <li><a href="https://www.linkedin.com/company/pycx/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                 <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
               </ul>
+
             </div>
+
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} PYCX - Todos los derechos reservados</p>
-          <p>Hecho con ❤️ en Córdoba, Argentina</p>
+          <p style={{ opacity: 0.6, fontSize: "0.8rem" }}>
+            © 2026 PYCX — Desarrollo web y soluciones digitales.
+          </p>
+          <p style={{ opacity: 0.5, fontSize: "0.8rem" }}>
+            Desarrollado por el equipo de PYCX
+          </p>
+          <p style={{ opacity: 0.7, fontSize: "0.9rem" }}>
+            PYCX es una agencia de desarrollo web especializada en crear páginas web
+            para PYMES en Argentina.
+          </p>
+
+          <p style={{ opacity: 0.6, fontSize: "0.8rem" }}>
+            Fundado por Mateo Benjamín Italiano y Matias Sposetti.
+          </p>
+
         </div>
       </div>
     </footer>

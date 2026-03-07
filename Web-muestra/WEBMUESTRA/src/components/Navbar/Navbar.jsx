@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import logo from "/public/pycx.png";
+// import logo from "/public/pycx.png";  // Si usás logo
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -26,24 +26,24 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-container container">
         <div className="logo" onClick={() => scrollToSection("hero")}>
-          <img src="pycx.png" alt="" />
+          <img src="pycx.png" alt="PYCX" />
         </div>
 
-        <div
-          className={`menu-icon ${menuOpen ? "open" : ""}`}
+        {/* MENU ICON - Font Awesome */}
+        <div 
+          className="menu-icon" 
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          {menuOpen ? (
+            <i className="fas fa-times"></i>  /* Icono X cuando está abierto */
+          ) : (
+            <i className="fas fa-bars"></i>   /* Icono hamburguesa cuando está cerrado */
+          )}
         </div>
 
         <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
           <li>
             <button onClick={() => scrollToSection("about")}>Nosotros</button>
-          </li>
-          <li>
-            <button onClick={() => scrollToSection("como-trabajamos")}>¿Como Trabajamos?</button>
           </li>
           <li>
             <button onClick={() => scrollToSection("projects")}>

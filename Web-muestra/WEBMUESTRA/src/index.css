@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+/* .seo-title{
+position:absolute;
+left:-9999px;
+} */
+
 :root {
   --primary: #2563eb;
   --primary-dark: #1d4ed8;
@@ -86,6 +91,30 @@ h3 {
   margin-bottom: 1rem;
 }
 
+/* ===== RESPONSIVE INDEX ===== */
+
+@media (max-width: 1300px) {
+  .container {
+    max-width: 1100px;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+  }
+  
+  .container {
+    max-width: 900px;
+    padding: 0 1.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -95,7 +124,61 @@ h3 {
     font-size: 2rem;
   }
   
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  .section {
+    padding: 4rem 0;
+  }
+  
+  .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
   .section {
     padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1.2rem;
+  }
+}
+
+@media (max-width: 390px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
   }
 }
