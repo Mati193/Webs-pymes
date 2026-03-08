@@ -1,3 +1,22 @@
+.class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: white;
+}
+
+.colorcito{
+  text-decoration: none;
+  color: rgb(255, 196, 0);
+  font-size: 20px;
+  background-color: black;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+
 /* ========================= */
 /* SECTION HEADER */
 /* ========================= */
@@ -339,7 +358,7 @@
   .section-header {
     max-width: 600px;
   }
-  
+
   .team-grid {
     gap: 3.5rem;
   }
@@ -350,22 +369,22 @@
     max-width: 500px;
     margin: 0 auto 4rem;
   }
-  
+
   .section-header h2 {
     font-size: 2rem;
   }
-  
+
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem 2rem;
   }
-  
+
   .team-card img {
     width: 140px;
     height: 140px;
     top: -70px;
   }
-  
+
   .about-features {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -376,66 +395,66 @@
     margin: 0 auto 4rem;
     padding: 0 1rem;
   }
-  
+
   .section-header h2 {
     font-size: 1.8rem;
   }
-  
+
   .section-description {
     font-size: 1rem;
   }
-  
+
   .team-grid {
     grid-template-columns: 1fr;
     gap: 5rem;
     max-width: 400px;
     margin: 0 auto 3rem;
   }
-  
+
   .team-card {
     padding: 4rem 1.5rem 2rem;
   }
-  
+
   .team-card img {
     width: 120px;
     height: 120px;
     top: -60px;
   }
-  
+
   .team-card h3 {
     font-size: 1.2rem;
   }
-  
+
   .member-role {
     font-size: 0.9rem;
   }
-  
+
   .member-description {
     font-size: 0.9rem;
   }
-  
+
   .about-features {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     max-width: 400px;
     margin: 2rem auto 0;
   }
-  
+
   .feature-item {
     padding: 2rem 1.5rem;
   }
-  
+
   .modal-header {
     padding: 25px 20px 15px;
     flex-direction: column;
     text-align: center;
   }
-  
+
   .modal-header img {
     width: 80px;
     height: 80px;
   }
-  
+
   .modal-body {
     padding: 15px 20px 25px;
   }
@@ -445,89 +464,89 @@
   .section-header {
     margin: 0 auto 3rem;
   }
-  
+
   .section-header h2 {
     font-size: 1.6rem;
   }
-  
+
   .section-badge {
     font-size: 0.8rem;
     padding: 0.4rem 1rem;
   }
-  
+
   .section-description {
     font-size: 0.95rem;
   }
-  
+
   .team-grid {
     gap: 4rem;
   }
-  
+
   .team-card {
     padding: 3.5rem 1.2rem 1.8rem;
   }
-  
+
   .team-card img {
     width: 100px;
     height: 100px;
     top: -50px;
     border-width: 4px;
   }
-  
+
   .team-card h3 {
     font-size: 1.1rem;
   }
-  
+
   .member-role {
     font-size: 0.85rem;
   }
-  
+
   .member-description {
     font-size: 0.85rem;
   }
-  
+
   .feature-item {
     padding: 1.8rem 1.2rem;
   }
-  
+
   .feature-icon {
     font-size: 2rem;
   }
-  
+
   .feature-item h4 {
     font-size: 1.1rem;
   }
-  
+
   .feature-item p {
     font-size: 0.9rem;
   }
-  
+
   .modal-content {
     width: 95%;
     max-height: 85vh;
   }
-  
+
   .modal-header {
     padding: 20px 15px 10px;
   }
-  
+
   .modal-header img {
     width: 70px;
     height: 70px;
   }
-  
+
   .modal-header h3 {
     font-size: 1.1rem;
   }
-  
+
   .modal-role {
     font-size: 0.85rem;
   }
-  
+
   .modal-bio {
     font-size: 0.9rem;
   }
-  
+
   .skill-tag {
     padding: 4px 12px;
     font-size: 0.8rem;
@@ -538,64 +557,64 @@
   .section-header h2 {
     font-size: 1.4rem;
   }
-  
+
   .section-badge {
     font-size: 0.75rem;
     padding: 0.3rem 0.8rem;
   }
-  
+
   .section-description {
     font-size: 0.9rem;
   }
-  
+
   .team-card {
     padding: 3rem 1rem 1.5rem;
   }
-  
+
   .team-card img {
     width: 90px;
     height: 90px;
     top: -45px;
   }
-  
+
   .team-card h3 {
     font-size: 1rem;
   }
-  
+
   .member-role {
     font-size: 0.8rem;
   }
-  
+
   .member-description {
     font-size: 0.8rem;
   }
-  
+
   .feature-item {
     padding: 1.5rem 1rem;
   }
-  
+
   .feature-icon {
     font-size: 1.8rem;
   }
-  
+
   .feature-item h4 {
     font-size: 1rem;
   }
-  
+
   .feature-item p {
     font-size: 0.85rem;
   }
-  
+
   .modal-header img {
     width: 60px;
     height: 60px;
     border-width: 2px;
   }
-  
+
   .modal-header h3 {
     font-size: 1rem;
   }
-  
+
   .modal-close {
     width: 30px;
     height: 30px;

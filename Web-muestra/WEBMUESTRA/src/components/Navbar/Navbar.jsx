@@ -26,12 +26,12 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-container container">
         <div className="logo" onClick={() => scrollToSection("hero")}>
-          <img src="pycx.png" alt="PYCX" />
+          <img src="pycx.png" alt="PYCX | Desarrollo Web para Empresas PYMES" />
         </div>
 
         {/* MENU ICON - Font Awesome */}
-        <div 
-          className="menu-icon" 
+        <div
+          className="menu-icon"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? (
@@ -44,6 +44,10 @@ const Navbar = () => {
         <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
           <li>
             <button onClick={() => scrollToSection("about")}>Nosotros</button>
+          </li>
+
+          <li>
+            <button onClick={() => scrollToSection("work")}>¿Como Trabajamos?</button>
           </li>
           <li>
             <button onClick={() => scrollToSection("projects")}>

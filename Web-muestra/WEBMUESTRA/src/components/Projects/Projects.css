@@ -1,4 +1,4 @@
-.info{
+.info {
   margin-top: 20px;
   margin-left: 100px;
   text-decoration: none;
@@ -90,9 +90,36 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.8rem;
   }
-  
+
   .info {
     margin-left: 50px;
+  }
+
+  .projects.projects.section:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.411);
+    /* ← intensidad */
+    z-index: 0;
+
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .projects-grid .project-card {
+    /* MAS PROYECTOS*/
+    position: relative;
+    margin-bottom: 0px;
+    bottom: 30px;
+    height: 470px;
+  }
+
+  .section-header h2 {
+    font-size: 30px;
   }
 }
 
@@ -101,57 +128,65 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-  
+
   .projects-filter {
     gap: 0.8rem;
   }
-  
+
   .filter-btn {
     padding: 0.5rem 1.2rem;
     font-size: 0.9rem;
   }
-  
+
   .info {
     margin-left: 30px;
+  }
+
+  .section-header h2 {
+    font-size: 25px;
+  }
+
+  .section-description {
+    font-size: 15px;
   }
 }
 
 @media (max-width: 768px) {
-  
+
   .projects-filter {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 1rem;
   }
-  
+
   .filter-btn {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
   }
-  
+
   .projects-grid {
     grid-template-columns: 1fr;
     max-width: 450px;
     margin: 0 auto;
     gap: 2rem;
   }
-  
+
   .project-card {
     padding: 1.8rem;
   }
-  
+
   .project-emoji {
     font-size: 3rem;
   }
-  
+
   .project-card h3 {
     font-size: 1.3rem;
   }
-  
+
   .project-description {
     font-size: 0.95rem;
   }
-  
+
   .info {
     margin-left: 20px;
     font-size: 0.9rem;
@@ -159,43 +194,48 @@
 }
 
 @media (max-width: 576px) {
+  .section-badge {
+    margin-top: 30px;
+  }
+
   .projects-filter {
     gap: 0.5rem;
   }
-  
+
   .filter-btn {
     padding: 0.4rem 0.9rem;
     font-size: 0.8rem;
   }
-  
+
   .projects-grid {
     max-width: 350px;
     padding: 0 1rem;
   }
-  
+
   .project-card {
     padding: 1.5rem;
+
   }
-  
+
   .project-emoji {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
-  
+
   .project-card h3 {
     font-size: 1.2rem;
   }
-  
+
   .project-description {
     font-size: 0.9rem;
     margin-bottom: 1.2rem;
   }
-  
+
   .result-badge {
     padding: 0.3rem 0.8rem;
     font-size: 0.8rem;
   }
-  
+
   .info {
     margin-left: 15px;
     font-size: 0.85rem;
@@ -208,39 +248,39 @@
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   .filter-btn {
     width: 100%;
     max-width: 200px;
     text-align: center;
     padding: 0.5rem;
   }
-  
+
   .projects-grid {
     max-width: 280px;
   }
-  
+
   .project-card {
     padding: 1.2rem;
   }
-  
+
   .project-emoji {
     font-size: 2.2rem;
   }
-  
+
   .project-card h3 {
     font-size: 1.1rem;
   }
-  
+
   .project-description {
     font-size: 0.85rem;
   }
-  
+
   .result-badge {
     padding: 0.25rem 0.6rem;
     font-size: 0.75rem;
   }
-  
+
   .info {
     margin-left: 10px;
     font-size: 0.8rem;

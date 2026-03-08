@@ -2,7 +2,7 @@
   background: white;
 }
 
-.section-description{
+.section-description {
   color: #b8b8b8;
 }
 
@@ -75,126 +75,26 @@
   }
 
 
-@media (max-width: 992px) {
-  .skills-grid {
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-  }
-  
-  .skill-header {
-    font-size: 0.95rem;
-  }
+  @media (max-width: 992px) {
+    .skills-grid {
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+    }
 
-    .skills-note{
-    margin-bottom: 2000px;
+    .skill-header {
+      font-size: 0.95rem;
+    }
+
+    .skills-note {
+      margin-bottom: 2000px;
+    }
   }
-}
 }
 
 @media (max-width: 768px) {
-  .skills {
-    height: auto;
-    min-height: 100vh;
-    padding: 4rem 0;
-  }
-  
   .skills-grid {
-    max-width: 500px;
-    padding: 0 1rem;
-  }
-  
-  .skill-name {
-    font-size: 0.95rem;
-  }
-  
-  .skill-emoji {
-    font-size: 1.1rem;
-  }
-  
-  .skill-percentage {
-    font-size: 0.9rem;
-  }
-  
-  .progress-bar {
-    height: 8px;
-  }
-  
-  .skills-note {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    font-size: 1rem;
+    grid-template-columns: 1fr;
+    max-width: 350px;
   }
 }
 
-@media (max-width: 576px) {
-  .skills {
-    padding: 3rem 0;
-  }
-  
-  .skills-grid {
-    max-width: 400px;
-  }
-  
-  .skill-item {
-    margin-bottom: 1.2rem;
-  }
-  
-  .skill-name {
-    font-size: 0.9rem;
-  }
-  
-  .skill-emoji {
-    font-size: 1rem;
-  }
-  
-  .skill-percentage {
-    font-size: 0.85rem;
-  }
-  
-  .progress-bar {
-    height: 7px;
-  }
-  
-  .skills-note {
-    max-width: 400px;
-    padding: 1.2rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-}
-
-@media (max-width: 390px) {
-  .skills {
-    padding: 2.5rem 0;
-  }
-  
-  .skills-grid {
-    max-width: 280px;
-  }
-  
-  .skill-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .skill-name {
-    font-size: 0.85rem;
-  }
-  
-  .skill-percentage {
-    font-size: 0.8rem;
-  }
-  
-  .progress-bar {
-    height: 6px;
-  }
-  
-  .skills-note {
-    max-width: 280px;
-    padding: 1rem;
-    font-size: 0.85rem;
-  }
-}

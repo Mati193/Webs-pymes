@@ -39,31 +39,38 @@ const ComoTrabajamos = () => {
       descripcion: "Soporte directo con nosotros. Te ayudamos a usar tu web y la ajustamos según los resultados. Sos parte del equipo.",
       icono: "🤝",
       color: "linear-gradient(135deg, #217346, #185C37)"
+    },
+    {
+      numero: "6",
+      titulo: "Crecimiento",
+      descripcion: "Medimos resultados, analizamos el comportamiento de tus clientes y optimizamos tu web para que cada mes venda más.",
+      icono: "📈",
+      color: "linear-gradient(135deg, #6A11CB, #2575FC)"
     }
   ];
 
-const scroll = (direction) => {
-  if (sliderRef.current) {
-    const container = sliderRef.current;
-    const cardWidth = 336; // 320px + 16px de gap
-    const currentScroll = container.scrollLeft;
-    
-    let newScrollLeft;
-    if (direction === 'left') {
-      newScrollLeft = currentScroll - cardWidth * 3;
-    } else {
-      newScrollLeft = currentScroll + cardWidth * 3;
+  const scroll = (direction) => {
+    if (sliderRef.current) {
+      const container = sliderRef.current;
+      const cardWidth = 336; // 320px + 16px de gap
+      const currentScroll = container.scrollLeft;
+
+      let newScrollLeft;
+      if (direction === 'left') {
+        newScrollLeft = currentScroll - cardWidth * 3;
+      } else {
+        newScrollLeft = currentScroll + cardWidth * 3;
+      }
+
+      container.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+      });
     }
-    
-    container.scrollTo({
-      left: newScrollLeft,
-      behavior: 'smooth'
-    });
-  }
-};
+  };
 
   return (
-    <section className="como-trabajamos" id="como-trabajamos">
+    <section className="como-trabajamos" id="work">
       <div className="container">
         {/* Header */}
         <div className="section-header">

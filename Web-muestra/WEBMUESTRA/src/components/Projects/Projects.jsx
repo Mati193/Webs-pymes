@@ -48,8 +48,8 @@ const Projects = () => {
           <span className="section-badge">💼 Casos de éxito</span>
 
           <h2>
-            Resultados <span className="highlight">reales</span> para negocios
-            <span className="highlight"> reales</span>
+            Resultados <span className="highlight">reales </span>  para negocios 
+            <span className="highlight"> reales </span>
           </h2>
 
           <p className="section-description">

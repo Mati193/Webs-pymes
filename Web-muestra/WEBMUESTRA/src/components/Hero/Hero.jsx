@@ -64,7 +64,7 @@ const Hero = () => {
 
 
             <div className="stat-item">
-              <span className="stat-label">Más de 10 negocios ya trabajan con PYCX para crecer online.
+              <span className="stat-label comment">Más de 10 negocios ya trabajan con PYCX para crecer online.
               </span>
             </div>
           </div>

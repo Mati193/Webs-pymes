@@ -100,6 +100,9 @@ const About = () => {
                       </span>
                     ))}
                   </div>
+                  <div className="class">
+                    <a href="https://italiano-dev.netlify.app/" className="colorcito" alt="Portfolio de Mateo Benjamin Italiano Fundador de PYCX y Profesor de Informatica">Portfolio</a>
+                  </div>
                 </div>
               </div>
             </div>
