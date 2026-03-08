@@ -2,13 +2,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./about.css";
 import "../global.css";
+import logo from "../../assets/Logo_panteon.jpg";
 import Card from "../Card/index.jsx";
 import PerfilCard from "../Perfil-Card/index.jsx";
-<script
-  src="https://kit.fontawesome.com/7345c2bc7b.js"
-  crossorigin="anonymous"
-></script>;
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect } from "react";
+
 function About({ titulo, presentacion, frase }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // duración de animación
+      once: true, // solo se anima una vez
+    });
+  }, []);
   const skills = [
     {
       titulo: "Panificación artesanal",
@@ -44,7 +51,7 @@ function About({ titulo, presentacion, frase }) {
   const team = [
     {
       name: "Mateo",
-      img: "hola",
+      img: logo,
       role: "Maestro Panadero",
       description:
         "Alma detrás de los hornos de Panteón. se encarga de seleccionar cuidadosamente cada ingrediente, respetando tiempos de fermentación y procesos que garantizan sabor, textura y calidad en cada pieza de pan.",
@@ -55,7 +62,7 @@ function About({ titulo, presentacion, frase }) {
     },
     {
       name: "Sofía",
-      img: "hola",
+      img: logo,
       role: "Encargada de Experiencia y Atención",
       description:
         "Encargada de la atención al cliente. A cargo de la atención al cliente, la organización del local y la coordinación del día a día para que todo funcione de manera armoniosa.",
@@ -67,13 +74,13 @@ function About({ titulo, presentacion, frase }) {
   ];
   return (
     <section id="about" className="contenedor">
-      <div className="personal">
+      <div className="personal" data-aos="fade-right">
         <PerfilCard team={team} />
       </div>
-      <div className="skills">
+
+      <div className="skills" data-aos="fade-up">
         <Card contenido={skills} />
       </div>
-      <p></p>
     </section>
   );
 }
