@@ -9,7 +9,7 @@ const Hero = () => {
           {/* <h1 className="seo-title">
             PYCX - Desarrollo web para PYMES en Argentina
           </h1> */}
-          <span className="hero-badge">
+          <span className="hero-badge principal">
             🚀 PYCX - Soluciones Web para PYMES
           </span>
           <h1>

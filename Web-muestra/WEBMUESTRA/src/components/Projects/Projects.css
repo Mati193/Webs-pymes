@@ -114,8 +114,6 @@
     /* MAS PROYECTOS*/
     position: relative;
     margin-bottom: 0px;
-    bottom: 30px;
-    height: 470px;
   }
 
   .section-header h2 {
@@ -243,11 +241,37 @@
 }
 
 @media (max-width: 390px) {
+
+  .hero-badge.principal {
+    margin-top: 10px;
+  }
+
+  .skills-note {
+    display: none;
+  }
+
+  .skills.section {
+    min-height: 100vh;
+
+  }
+
   .projects-filter {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
+
+
+  .projects.projects.section:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.411);
+    /* ← intensidad */
+    z-index: 0;
+
+  }
+
 
   .filter-btn {
     width: 100%;

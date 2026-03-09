@@ -24,33 +24,13 @@
   margin-bottom: 30px;
 }
 
-/* 
-.cursos-slider-container::-webkit-scrollbar {
-    display: none;
-
-  height: 8px;
-}
-
-.cursos-slider-container::-webkit-scrollbar-track {
-  background: #e2e8f0;
-  border-radius: 10px;
-}
-
-.cursos-slider-container::-webkit-scrollbar-thumb {
-  background: #2563eb;
-  border-radius: 10px;
-} */
-
 .cursos-slider-container {
   width: 100%;
   overflow-x: auto;
   padding: 2rem 0 3rem;
   margin: 0;
-
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-
-  /* ocultar scrollbar */
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -62,9 +42,9 @@
 .cursos-slider {
   display: flex;
   gap: 1rem;
-  /* Cambiado de 4rem a 1rem */
   padding: 0 1rem;
-  min-width: min-content;
+  width: max-content;
+  min-width: 100%;
 }
 
 /* Cards */
@@ -77,6 +57,7 @@
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.05);
   height: 450px;
+  cursor: pointer;
 }
 
 .curso-card:hover {
@@ -237,9 +218,8 @@
   background: linear-gradient(135deg, #1e40af, #1e3a8a);
 }
 
-
 /* ========================= */
-/* BOTONES DEL SLIDER - AGREGADO */
+/* BOTONES DEL SLIDER */
 /* ========================= */
 
 .slider-wrapper {
@@ -247,7 +227,6 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  /* espacio entre botones y slider */
   margin: 0;
 }
 
@@ -309,42 +288,6 @@
   }
 }
 
-
-/* ========================= */
-/* AJUSTE PARA 3 CARDS - REEMPLAZÁ LAS PARTES CORRESPONDIENTES */
-/* ========================= */
-
-.cursos-slider-container {
-  width: 100%;
-  overflow-x: auto;
-  padding: 2rem 0 3rem;
-  margin: 0;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-
-.cursos-slider {
-  display: flex;
-  gap: 1rem;
-  padding: 0 1rem;
-  /* Esto fuerza que el slider tenga el ancho justo para todas las cards */
-  width: max-content;
-  min-width: 100%;
-}
-
-/* Cards */
-.curso-card {
-  flex: 0 0 320px;
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  height: 450px;
-}
-
-
 /* Centrar el wrapper */
 .slider-wrapper {
   position: relative;
@@ -355,29 +298,25 @@
   max-width: 100%;
 }
 
-
-
-
-/* ===== RESPONSIVE WORK (CÓMO TRABAJAMOS) ===== */
+/* ===== RESPONSIVE WORK ===== */
 
 @media (max-width: 1300px) {
-
-  .slider-wrapper{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  .slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     bottom: 25px;
   }
 
-  .cursos-slider{
-    display:flex;
-    gap:2rem;
-    width:100%;
+  .cursos-slider {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
   }
 
-  .curso-card{
-    flex:0 0 calc(50% - 1rem);
-    max-width:calc(50% - 1rem);
+  .curso-card {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
   }
 
   .proceso-cta {
@@ -398,7 +337,6 @@
     font-size: 35px;
   }
 }
-
 
 @media (max-width: 992px) {
   .como-trabajamos {
@@ -446,7 +384,7 @@
     padding: 3rem 0;
   }
 
-  .section-badge.proceso{
+  .section-badge.proceso {
     margin-top: 30px;
   }
 
@@ -455,11 +393,11 @@
     padding: 0 1rem;
   }
 
-  .section-header h2{
+  .section-header h2 {
     font-size: 20px;
   }
 
-  .section-description{
+  .section-description {
     font-size: 15px;
   }
 
@@ -627,88 +565,180 @@
   }
 }
 
+/* ===== RESPONSIVE 400px CON EFECTO CLICK ===== */
 @media (max-width: 400px) {
 
-  .curso-badge.trending{
-    font-size: 9px
+  .como-trabajamos{
+    padding:2rem 0;
+    position:relative;
+    min-height:100vh;
   }
 
-  .como-trabajamos {
-    padding: 2rem 0;
+  .section-header h2{
+    font-size:1.4rem;
   }
 
-  .section-header h2 {
-    font-size: 1.4rem;
-  }
-  
-
-  .section-description {
-    font-size: 0.9rem;
+  .section-description{
+    font-size:0.9rem;
   }
 
-  .section-badge.proceso {
-    margin-top: 35px;
-    font-size: 0.75rem;
+  .section-badge.proceso{
+    margin-top:35px;
+    font-size:0.75rem;
   }
 
-  .curso-card {
-    flex: 0 0 240px;
-    height: 380px;
-  }
+  /* CONTAINER */
 
-  .curso-header {
-    min-height: 100px;
+  .cursos-slider-container{
+    position:relative;
+    min-height:420px;
   }
-
-  .curso-titulo {
-    font-size: 15px;
-  }
-
-  .curso-contenido {
-    padding: 0.8rem;
-  }
-
-  .curso-descripcion {
-    font-size: 0.75rem;
-    min-height: 50px;
-  }
-
-  .curso-info span {
-    font-size: 0.7rem;
-    gap: 0.3rem;
-  }
-
-  .curso-info i {
-    width: 16px;
-  }
-
-  .btn-ver-curso {
-    font-size: 0.75rem;
-  }
-
 
   .cursos-slider{
-    width: 40rem;
+    display:flex;
+    gap:1rem;
+    padding:0 1rem;
+    width: 600px;
   }
 
+  /* Cuando una card está expandida */
 
-  .slider-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 0.8rem;
+  body.has-expanded-card{
+    overflow:hidden;
   }
 
-  .proceso-cta {
-    padding: 1.2rem;
-    border-radius: 20px;
+  body.has-expanded-card .cursos-slider,
+  body.has-expanded-card .slider-btn{
+    opacity:.25;
+    pointer-events:none;
   }
 
-  .proceso-cta p {
-    font-size: 0.95rem;
+  /* CARDS */
+
+  .curso-card{
+    flex:0 0 240px;
+    height:350px;
+    transition:transform .3s ease, box-shadow .3s ease;
+    cursor:pointer;
+    position:relative;
+    z-index:1;
   }
 
-  .cta-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
+  /* CARD EXPANDIDA */
+
+  .curso-card.expandido{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:280px;
+    height:450px;
+    z-index:10001;
+    box-shadow:0 25px 60px rgba(0,0,0,.5);
   }
+
+  /* OVERLAY GLOBAL */
+
+  body.has-expanded-card::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(6px);
+    z-index:10000;
+    animation:fadeIn .25s ease;
+  }
+
+  /* CLOSE BUTTON */
+
+  .close-btn-expandido{
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    color:white;
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(5px);
+    border:1px solid rgba(255,255,255,.3);
+    cursor:pointer;
+    transition:.2s;
+    z-index:10002;
+  }
+
+  .close-btn-expandido:hover{
+    background:rgba(255,255,255,.3);
+  }
+
+  @keyframes fadeIn{
+    from{opacity:0}
+    to{opacity:1}
+  }
+
+  /* CONTENIDO */
+
+  .curso-header{
+    min-height:100px;
+  }
+
+  .curso-titulo{
+    font-size:15px;
+  }
+
+  .curso-contenido{
+    padding:.8rem;
+    background:aliceblue;
+  }
+
+  .curso-descripcion{
+    font-size:.75rem;
+    min-height:50px;
+  }
+
+  .curso-info span{
+    font-size:.7rem;
+    gap:.3rem;
+  }
+
+  .curso-info i{
+    width:16px;
+  }
+
+  .btn-ver-curso{
+    font-size:.75rem;
+  }
+
+  .slider-btn{
+    width:35px;
+    height:35px;
+    font-size:.8rem;
+  }
+
+  /* CTA */
+
+  .proceso-cta{
+    padding:1.2rem;
+    border-radius:20px;
+    width:90%;
+    margin:auto;
+  }
+
+  .proceso-cta p{
+    font-size:.95rem;
+  }
+
+  .cta-button{
+    padding:.6rem 1.2rem;
+    font-size:.85rem;
+  }
+
+  .curso-badge.trending{
+    display: none;
+  }
+
 }

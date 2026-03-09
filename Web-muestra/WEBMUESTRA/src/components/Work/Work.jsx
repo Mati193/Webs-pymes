@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './Work.css';
 
 const ComoTrabajamos = () => {
   const sliderRef = useRef(null);
+  const [expandedCard, setExpandedCard] = useState(null);
 
   const pasos = [
     {
@@ -52,16 +53,12 @@ const ComoTrabajamos = () => {
   const scroll = (direction) => {
     if (sliderRef.current) {
       const container = sliderRef.current;
-      const cardWidth = 336; // 320px + 16px de gap
+      const cardWidth = 336;
       const currentScroll = container.scrollLeft;
-
-      let newScrollLeft;
-      if (direction === 'left') {
-        newScrollLeft = currentScroll - cardWidth * 3;
-      } else {
-        newScrollLeft = currentScroll + cardWidth * 3;
-      }
-
+      const newScrollLeft = direction === 'left' 
+        ? currentScroll - cardWidth * 2 
+        : currentScroll + cardWidth * 2;
+      
       container.scrollTo({
         left: newScrollLeft,
         behavior: 'smooth'
@@ -69,10 +66,18 @@ const ComoTrabajamos = () => {
     }
   };
 
+  const handleCardClick = (index) => {
+    setExpandedCard(index);
+  };
+
+  const handleCloseClick = (e) => {
+    e.stopPropagation();
+    setExpandedCard(null);
+  };
+
   return (
     <section className="como-trabajamos" id="work">
       <div className="container">
-        {/* Header */}
         <div className="section-header">
           <span className="section-badge proceso">⚙️ Nuestro proceso</span>
           <h2>Así trabajamos para que vendas más</h2>
@@ -82,7 +87,6 @@ const ComoTrabajamos = () => {
           </p>
         </div>
 
-        {/* Slider con botones */}
         <div className="slider-wrapper">
           <button
             className="slider-btn slider-btn-left"
@@ -93,9 +97,13 @@ const ComoTrabajamos = () => {
           </button>
 
           <div className="cursos-slider-container" ref={sliderRef}>
-            <div className="cursos-slider" id="cursosSlider">
+            <div className="cursos-slider">
               {pasos.map((paso, index) => (
-                <div key={index} className="curso-card">
+                <div 
+                  key={index} 
+                  className={`curso-card ${expandedCard === index ? 'expandido' : ''}`}
+                  onClick={() => handleCardClick(index)}
+                >
                   <div className="curso-header" style={{ background: paso.color }}>
                     <span className="curso-categoria">Paso {paso.numero}</span>
                     <h3 className="curso-titulo">{paso.titulo}</h3>
@@ -111,6 +119,15 @@ const ComoTrabajamos = () => {
                       {paso.numero === "1" && <span className="gratis-badge">✨ Sin cargo</span>}
                     </div>
                   </div>
+
+                  {expandedCard === index && (
+                    <div 
+                      className="close-btn-expandido" 
+                      onClick={handleCloseClick}
+                    >
+                      ✕
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -124,12 +141,6 @@ const ComoTrabajamos = () => {
             <i className="fas fa-chevron-right"></i>
           </button>
         </div>
-
-        {/* CTA
-        <div className="proceso-cta">
-          <p>Agendá tu <strong><span className='highlight'>TURNO</span></strong> para el diagnóstico gratuito</p>
-          <a href="#contact" className="cta-button">Quiero mi diagnóstico</a>
-        </div> */}
       </div>
     </section>
   );

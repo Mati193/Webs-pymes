@@ -73,23 +73,21 @@
   .skills-grid {
     max-width: 700px;
   }
-
-
-  @media (max-width: 992px) {
-    .skills-grid {
-      max-width: 600px;
-      margin: 0 auto 2.5rem;
-    }
-
-    .skill-header {
-      font-size: 0.95rem;
-    }
-
-    .skills-note {
-      margin-bottom: 2000px;
-    }
-  }
 }
+
+@media (max-width: 992px) {
+  .skills-grid {
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .skill-header {
+    font-size: 0.95rem;
+  }
+
+
+}
+
 
 @media (max-width: 768px) {
   .skills-grid {
@@ -97,4 +95,3 @@
     max-width: 350px;
   }
 }
-

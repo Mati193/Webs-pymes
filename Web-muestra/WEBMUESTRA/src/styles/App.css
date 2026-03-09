@@ -824,7 +824,7 @@
 }
 
 
-@media(max-width: 385px){
+@media(max-width: 395px){
   .skills-note p{
     font-size: 12px;
   }
@@ -836,6 +836,8 @@
     max-width: 600px;
     margin: 0 auto;
   }
+
+  
 }
 
 @media(max-width:375px){
