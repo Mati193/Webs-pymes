@@ -11,7 +11,7 @@
     var(--primary-400)
   );
   --dark-bg: var(--secondary-700);
-  --light-cream: var(--tertiary-200);
+  --light-cream: var(--tertiary-100);
   --text-warm: var(--secondary-400);
 }
 

@@ -36,30 +36,30 @@ section {
 
 :root {
   /* COLORES PRINCIPALES */
-  --color-primary: #15f4ed;
-  --color-secondary: #1c3372;
-  --color-tertiary: #6624f6;
+  --color-primary: #f47615;
+  --color-secondary: #72461c;
+  --color-tertiary: #f6d024;
 
   /* VARIACIONES GENERADAS */
-  --color-primary-light: #4dffdb;
-  --color-primary-dark: #14c8b9;
+  --color-primary-light: #ffa04d;
+  --color-primary-dark: #c86514;
 
-  --color-secondary-light: #2c2c8a;
-  --color-secondary-dark: #14165a;
+  --color-secondary-light: #8a5a2c;
+  --color-secondary-dark: #5a3514;
 
-  --color-tertiary-light: #9b63f5;
-  --color-tertiary-dark: #5b00cb;
+  --color-tertiary-light: #f5da63;
+  --color-tertiary-dark: #cbc100;
 
   /* COLORES DE TEXTO */
   --text-light: #ffffff;
-  --text-muted: #c0c0d3;
+  --text-muted: #d3c9c0;
 
   /* FONDOS */
   --bg-main: var(--color-primary);
   --bg-card: var(--color-secondary);
 
   /* BORDES */
-  --border-accent: #387add;
+  --border-accent: #dda138;
 
   --primary-100: color-mix(in srgb, var(--color-primary) 20%, white);
   --primary-200: color-mix(in srgb, var(--color-primary) 40%, white);
