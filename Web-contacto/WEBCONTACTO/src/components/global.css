@@ -36,30 +36,30 @@ section {
 
 :root {
   /* COLORES PRINCIPALES */
-  --color-primary: #f47615;
-  --color-secondary: #72461c;
-  --color-tertiary: #f6d024;
+  --color-primary: #15f4ed;
+  --color-secondary: #1c3372;
+  --color-tertiary: #6624f6;
 
   /* VARIACIONES GENERADAS */
-  --color-primary-light: #ffa04d;
-  --color-primary-dark: #c86514;
+  --color-primary-light: #4dffdb;
+  --color-primary-dark: #14c8b9;
 
-  --color-secondary-light: #8a5a2c;
-  --color-secondary-dark: #5a3514;
+  --color-secondary-light: #2c2c8a;
+  --color-secondary-dark: #14165a;
 
-  --color-tertiary-light: #f5da63;
-  --color-tertiary-dark: #cbc100;
+  --color-tertiary-light: #9b63f5;
+  --color-tertiary-dark: #5b00cb;
 
   /* COLORES DE TEXTO */
   --text-light: #ffffff;
-  --text-muted: #d3c9c0;
+  --text-muted: #c0c0d3;
 
   /* FONDOS */
   --bg-main: var(--color-primary);
   --bg-card: var(--color-secondary);
 
   /* BORDES */
-  --border-accent: #dda138;
+  --border-accent: #387add;
 
   --primary-100: color-mix(in srgb, var(--color-primary) 20%, white);
   --primary-200: color-mix(in srgb, var(--color-primary) 40%, white);
@@ -94,21 +94,6 @@ section {
   --tertiary-700: color-mix(in srgb, var(--color-tertiary) 60%, black);
   --tertiary-800: color-mix(in srgb, var(--color-tertiary) 40%, black);
 }
-.theme-panaderia {
-  --color-primary: #f47615;
-  --color-secondary: #72461c;
-}
-
-.theme-cafe {
-  --color-primary: #6b3f1d;
-  --color-secondary: #2e1a0f;
-}
-
-.theme-dark {
-  --color-primary: #222;
-  --color-secondary: #111;
-}
-
 html,
 body {
   margin: 0;

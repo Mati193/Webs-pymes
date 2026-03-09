@@ -1,4 +1,3 @@
-
 /* ========================= */
 /* TEAM GRID */
 /* ========================= */
@@ -27,7 +26,8 @@
 
 .team-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(245, 197, 66, 0.25); /* Color primary fijo */
+  box-shadow: 0 25px 50px -12px
+    color-mix(in srgb, var(--color-tertiary) 50%, transparent); /* Color primary fijo */
 }
 
 /* FOTO CIRCULAR FLOTANTE */
@@ -57,13 +57,13 @@
 
 .team-card h3 {
   margin-bottom: 0.5rem;
-  color: #2c1810; /* secondary-700 */
+  color: var(--secondary-700); /* #2c1810  */
   font-size: 1.3rem;
   font-weight: 700;
 }
 
 .member-role {
-  color: #f5c542; /* primary-800 */
+  color: var(--primary-800); /* var(--tertiary-400) */
   font-weight: 600;
   margin-bottom: 1rem;
   font-size: 0.95rem;
@@ -72,28 +72,28 @@
 }
 
 .member-description {
-  color: #3f281d; /* secondary-800 */
+  color: var(--secondary-800); /* #3f281d */
   line-height: 1.6;
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
 }
 
 .member-info {
-  color: #f5c542; /* primary-800 */
+  color: var(--primary-800); /* var(--tertiary-400) */
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
   margin-top: 10px;
   display: inline-block;
   padding: 0.5rem 1.5rem;
-  border: 2px solid #f5c542;
+  border: 2px solid var(--primary-800); /*var(--tertiary-400) */
   border-radius: 30px;
   transition: all 0.3s ease;
 }
 
 .team-card:hover .member-info {
-  background: #f5c542;
-  color: #2c1810;
+  background: var(--tertiary-400); /* var(--tertiary-400)*/
+  color: var(--primary-800);
 }
 
 /* ========================= */
@@ -119,8 +119,8 @@
 .modal-content {
   background: linear-gradient(
     135deg,
-    #2c1810 0%,
-    #1f0f09 100%
+    var(--secondary-800) 0%,
+    var(--secondary-700) 100%
   ); /* primary-700 a primary-800 */
   border-radius: 30px;
   width: 90%;
@@ -128,8 +128,8 @@
   max-height: 85vh;
   overflow-y: auto;
   position: relative;
-  border: 1px solid rgba(245, 197, 66, 0.2);
-  box-shadow: 
+  border: 1px solid color-mix(in srgb, var(--tertiary-600) 20%, transparent);
+  box-shadow:
     0 25px 50px -12px rgba(0, 0, 0, 0.5),
     0 0 0 1px rgba(245, 197, 66, 0.1) inset;
   animation: slideUp 0.4s ease-out;
@@ -141,19 +141,19 @@
 }
 
 .modal-content::-webkit-scrollbar-track {
-  background: #2c1810;
+  background: var(--secondary-700);
   border-radius: 10px;
 }
 
 .modal-content::-webkit-scrollbar-thumb {
-  background: #f5c542;
+  background: var(--tertiary-400);
   border-radius: 10px;
 }
 
 /* Para Firefox */
 .modal-content {
   scrollbar-width: thin;
-  scrollbar-color: #f5c542 #2c1810;
+  scrollbar-color: var(--tertiary-400) #2c1810;
 }
 
 .modal-close {
@@ -178,10 +178,10 @@
 }
 
 .modal-close:hover {
-  background: rgba(245, 197, 66, 0.25);
+  background: color-mix(in srgb, var(--tertiary-600) 25%, transparent);
   transform: rotate(90deg) scale(1.1);
-  border-color: #f5c542;
-  color: #f5c542;
+  border-color: var(--tertiary-400);
+  color: var(--tertiary-400);
 }
 
 .modal-header {
@@ -189,7 +189,8 @@
   display: flex;
   align-items: center;
   gap: 25px;
-  border-bottom: 1px solid rgba(245, 197, 66, 0.15);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--tertiary-600) 15%, transparent);
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -199,7 +200,7 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: top;
-  border: 4px solid #f5c542;
+  border: 4px solid var(--tertiary-400);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -212,7 +213,7 @@
 }
 
 .modal-role {
-  color: #f5c542;
+  color: var(--tertiary-400);
   margin: 0;
   font-size: 1.1rem;
   font-weight: 500;
@@ -221,7 +222,7 @@
   display: inline-block;
   padding: 4px 12px;
   border-radius: 30px;
-  border: 1px solid rgba(245, 197, 66, 0.3);
+  border: 1px solid color-mix(in srgb, var(--tertiary-600) 30%, transparent);
 }
 
 .modal-body {
@@ -237,7 +238,7 @@
   background: rgba(0, 0, 0, 0.2);
   padding: 20px;
   border-radius: 20px;
-  border: 1px solid rgba(245, 197, 66, 0.1);
+  border: 1px solid color-mix(in srgb, var(--tertiary-800) 10%, transparent);
 }
 
 .modal-skills h4 {
@@ -247,7 +248,7 @@
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #fff, #f5c542);
+  background: linear-gradient(135deg, #fff, var(--tertiary-400));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -260,22 +261,27 @@
 }
 
 .skill-tag {
-  background: linear-gradient(135deg, rgba(245, 197, 66, 0.15), rgba(200, 120, 50, 0.15));
-  color: #f5c542;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--tertiary-600) 15%, transparent),
+    color-mix(in srgb, var(--primary-600) 15%, transparent)
+  );
+  color: var(--tertiary-400);
   padding: 8px 20px;
   border-radius: 30px;
   font-size: 0.95rem;
   font-weight: 500;
-  border: 1px solid rgba(245, 197, 66, 0.3);
+  border: 1px solid color-mix(in srgb, var(--tertiary-600) 40%, transparent);
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
 
 .skill-tag:hover {
-  background: rgba(245, 197, 66, 0.25);
+  background: color-mix(in srgb, var(--tertiary-600) 25%, transparent);
   transform: translateY(-2px);
-  border-color: #f5c542;
-  box-shadow: 0 5px 15px rgba(245, 197, 66, 0.2);
+  border-color: var(--tertiary-400);
+  box-shadow: 0 5px 15px
+    color-mix(in srgb, var(--tertiary-400) 20%, transparent);
 }
 
 /* ========================= */

@@ -1,15 +1,27 @@
 /* ===== VARIABLES LOCALES (por si acaso) ===== */
 :root {
-  --accent-gold: #f5c542;
-  --accent-burgundy: #b8321a;
-  --dark-bg: #2c1810;
-  --light-cream: #fff7e6;
-  --text-warm: #3f281d;
+  --accent-gold: color-mix(
+    in srgb,
+    var(--color-primary) 50%,
+    var(--color-tertiary)
+  );
+  --accent-burgundy: color-mix(
+    in srgb,
+    var(--color-primary) 60%,
+    var(--primary-400)
+  );
+  --dark-bg: var(--secondary-700);
+  --light-cream: var(--tertiary-200);
+  --text-warm: var(--secondary-400);
 }
 
 /* ===== SECCION GENERAL ===== */
 .fondo {
-  background: radial-gradient(circle at 20% 30%, #3f281d 0%, #1f0f09 100%);
+  background: radial-gradient(
+    circle at 20% 30%,
+    var(--secondary-700) 0%,
+    var(--secondary-800) 100%
+  );
   padding: 80px 20px;
   text-align: center;
   position: relative;
@@ -44,7 +56,7 @@
   color: var(--accent-gold);
   text-transform: uppercase;
   letter-spacing: 4px;
-  text-shadow: 
+  text-shadow:
     3px 3px 0 var(--accent-burgundy),
     6px 6px 0 rgba(0, 0, 0, 0.3);
   position: relative;
@@ -114,7 +126,7 @@
   border-radius: 30px 30px 20px 20px;
   overflow: hidden;
   position: relative;
-  box-shadow: 
+  box-shadow:
     0 15px 30px -10px rgba(0, 0, 0, 0.5),
     0 0 0 2px var(--accent-gold) inset,
     0 0 0 4px var(--accent-burgundy) inset;
@@ -124,8 +136,9 @@
 
 .card:hover {
   transform: translateY(-12px) rotate(1deg);
-  box-shadow: 
-    0 25px 40px -10px rgba(184, 50, 26, 0.5),
+  box-shadow:
+    0 25px 40px -10px
+      color-mix(in srgb, var(--secondary-800) 60%, var(--color-primary-dark)),
     0 0 0 3px var(--accent-gold) inset,
     0 0 0 6px var(--accent-burgundy) inset;
 }
@@ -155,7 +168,11 @@
   left: 0;
   width: 100%;
   height: 40px;
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-burgundy));
+  background: linear-gradient(
+    135deg,
+    var(--accent-gold),
+    var(--accent-burgundy)
+  );
   opacity: 0.2;
   transition: opacity 0.3s ease;
   z-index: 1;
@@ -209,7 +226,11 @@
   display: block;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-gold), var(--accent-burgundy));
+  background: linear-gradient(
+    90deg,
+    var(--accent-gold),
+    var(--accent-burgundy)
+  );
   margin: 8px auto 0;
   border-radius: 4px;
   transition: width 0.3s ease;
