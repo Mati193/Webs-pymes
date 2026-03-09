@@ -30,25 +30,4 @@ function Productos({ eslogan, productos }) {
   );
 }
 
-/*Funcion de Tito
-function Productos({ productos }) {
-  return (
-    <section className="productos" id="productos">
-      <h2>Nuestros Productos</h2>
-
-      <div className="productos-grid">
-        {productos.map((producto, index) => (
-          <div className="producto-card" key={index}>
-            <h3>{producto.nombre}</h3>
-            <p>{producto.descripcion}</p>
-            <span className="precio">{producto.precio}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-*/
-
 export default Productos;

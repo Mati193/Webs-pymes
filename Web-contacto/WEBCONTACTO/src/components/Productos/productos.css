@@ -1,100 +1,280 @@
-/* ===== SECCION GENERAL ===== */
-.fondo {
-  background: linear-gradient(180deg, var(--bg-main));
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  padding: 60px 20px;
-  text-align: center;
+/* ===== VARIABLES LOCALES (por si acaso) ===== */
+:root {
+  --accent-gold: #f5c542;
+  --accent-burgundy: #b8321a;
+  --dark-bg: #2c1810;
+  --light-cream: #fff7e6;
+  --text-warm: #3f281d;
 }
 
-/* ===== TITULOS ===== */
+/* ===== SECCION GENERAL ===== */
+.fondo {
+  background: radial-gradient(circle at 20% 30%, #3f281d 0%, #1f0f09 100%);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de textura de harina */
+.fondo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== TITULOS CON ESTILO EXOTICO ===== */
+.titulos {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 60px;
+}
+
 .titulos h2 {
-  font-size: 2.2rem;
+  font-size: 3.5rem;
+  font-weight: 900;
   margin-bottom: 10px;
-  color: var(--color-secondary-dark);
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 
+    3px 3px 0 var(--accent-burgundy),
+    6px 6px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: inline-block;
+}
+
+/* Efecto de doble texto detrás */
+.titulos h2::before,
+.titulos h2::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.titulos h2::before {
+  color: var(--accent-burgundy);
+  transform: translate(8px, 8px);
+  opacity: 0.5;
+}
+
+.titulos h2::after {
+  color: rgba(255, 255, 255, 0.1);
+  transform: translate(12px, 12px);
 }
 
 .titulos h5 {
-  font-weight: normal;
-  color: var(--text-light);
-  margin-bottom: 40px;
-  margin: auto;
-  margin-bottom: 50px;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--light-cream);
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+  letter-spacing: 2px;
 }
 
-/* ===== CONTENEDOR ===== */
+.titulos h5::before,
+.titulos h5::after {
+  content: "✦";
+  color: var(--accent-gold);
+  margin: 0 15px;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+/* ===== CONTENEDOR CON ESTILO DE TABLERO ===== */
 .contenedor-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 260px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 310px));
   justify-content: center;
-  gap: 25px;
+  gap: 40px 30px;
+  position: relative;
+  z-index: 2;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* ===== CARD ===== */
+/* ===== CARD CON DISEÑO EXOTICO ===== */
 .card {
-  width: 260px;
-  background: var(--bg-card);
-  border-radius: 12px;
+  width: 100%;
+  background: var(--light-cream);
+  border-radius: 30px 30px 20px 20px;
   overflow: hidden;
   position: relative;
-
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  box-shadow: 
+    0 15px 30px -10px rgba(0, 0, 0, 0.5),
+    0 0 0 2px var(--accent-gold) inset,
+    0 0 0 4px var(--accent-burgundy) inset;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
 }
 
 .card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.25);
+  transform: translateY(-12px) rotate(1deg);
+  box-shadow: 
+    0 25px 40px -10px rgba(184, 50, 26, 0.5),
+    0 0 0 3px var(--accent-gold) inset,
+    0 0 0 6px var(--accent-burgundy) inset;
 }
 
-.img-productos {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-
-  transition: transform 0.4s ease;
+/* Elementos decorativos tipo "sello" */
+.card::before {
+  content: "🍞";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  opacity: 0.3;
+  transform: rotate(15deg);
+  z-index: 3;
+  transition: all 0.3s ease;
 }
 
-.card:hover .img-productos {
-  transform: scale(1.08);
+.card:hover::before {
+  opacity: 0.8;
+  transform: rotate(0deg) scale(1.2);
 }
 
 .card::after {
   content: "";
   position: absolute;
-  inset: 0;
-
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-burgundy));
+  opacity: 0.2;
   transition: opacity 0.3s ease;
+  z-index: 1;
 }
 
 .card:hover::after {
-  opacity: 1;
+  opacity: 0.4;
 }
 
-/* ===== IMAGEN ===== */
+/* ===== IMAGEN CON MARCO EXOTICO ===== */
 .img-productos {
   width: 100%;
-  height: 180px;
+  height: 220px;
   object-fit: cover;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  border-bottom: 5px solid var(--accent-gold);
+  position: relative;
+  z-index: 2;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-/* ===== CONTENIDO ===== */
+.card:hover .img-productos {
+  transform: scale(1.1) rotate(-1deg);
+  border-bottom-color: var(--accent-burgundy);
+}
+
+/* ===== CONTENIDO CON ESTILO VINTAGE ===== */
 .card-body {
-  padding: 18px;
-  min-height: 100px;
+  padding: 25px 20px 20px;
+  position: relative;
+  z-index: 3;
+  background: var(--light-cream);
+  margin-top: -5px;
+  border-radius: 30px 30px 0 0;
 }
 
 .card-title {
-  font-size: 1.3rem;
-  margin-bottom: 8px;
-  color: var(--text-light);
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--dark-bg);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Línea decorativa bajo el título */
+.card-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-burgundy));
+  margin: 8px auto 0;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.card:hover .card-title::after {
+  width: 100px;
 }
 
 .card-text {
-  font-size: 0.95rem;
-  color: var(--text-muted);
+  font-size: 1rem;
+  color: var(--text-warm);
+  line-height: 1.5;
+  margin: 15px 0 5px;
+  font-style: italic;
+  position: relative;
+  padding: 0 5px;
+}
+
+/* Pequeño detalle de precio simulado (opcional) */
+.card-text::before {
+  content: "✦";
+  color: var(--accent-gold);
+  margin-right: 8px;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.card-text::after {
+  content: "✦";
+  color: var(--accent-burgundy);
+  margin-left: 8px;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* ===== EFECTOS ADICIONALES ===== */
+
+/* Efecto de brillo en hover */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card .shine-effect {
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.card:hover .shine-effect {
+  left: 100%;
+  opacity: 0.5;
+  transition: left 0.8s ease;
 }

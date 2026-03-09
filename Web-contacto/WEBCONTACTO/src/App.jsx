@@ -4,6 +4,7 @@ import logo from "./assets/Logo_panteon.jpg";
 import About from "./components/About";
 import Productos from "./components/Productos";
 import Contact from "./components/Contact/Contact";
+import WSP from "./components/WSP/wsp"
 
 // Constante para función productos Mati
 const productos = [
@@ -23,6 +24,20 @@ const productos = [
   ["Medialunas", "Medialunas de grasa o manteca", logo],
   ["Medialunas", "Medialunas de grasa o manteca", logo],
   ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+  ["Medialunas", "Medialunas de grasa o manteca", logo],
+
 ];
 
 // Constante para funcion productos Tito
@@ -58,6 +73,7 @@ const productos = [
 function App() {
   return (
     <>
+      <><WSP></WSP></>
       <NavBar
         marca={"Pan-teon"}
         logo={logo}

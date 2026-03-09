@@ -73,7 +73,7 @@ function About({ titulo, presentacion, frase }) {
     },
   ];
   return (
-    <section id="about" className="contenedor">
+    <section id="about" className="contenedor about">
       <div className="personal" data-aos="fade-right">
         <PerfilCard team={team} />
       </div>
