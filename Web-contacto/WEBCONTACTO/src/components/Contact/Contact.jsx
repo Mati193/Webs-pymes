@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
 
-const Contact = ({ mail, tel, ubi }) => {
+const Contact = ({ mail, tel, ubi, redes, laboral }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -51,22 +51,15 @@ const Contact = ({ mail, tel, ubi }) => {
             <div className="info-card">
               <h3>REDES SOCIALES</h3>
               <div className="social-links">
-                <a href="#" className="social-item">
-                  <span className="social-icon">📷</span>
-                  <span>@LoMasRico.Panaderias</span>
-                </a>
-                <a href="#" className="social-item">
-                  <span className="social-icon">📘</span>
-                  <span>@LoMasRico.Panaderias</span>
-                </a>
-                <a href="#" className="social-item">
-                  <span className="social-icon">📢</span>
-                  <span>Canal de difusión</span>
-                </a>
-                <a href="#" className="social-item">
-                  <span className="social-icon">🔗</span>
-                  <span>Linktr.ee/loomasrico.panaderias</span>
-                </a>
+                {redes.map(
+                  (datos, index) =>
+                    datos.habilitado && (
+                      <a href="#" className="social-item">
+                        <span className="social-icon">{datos.icon}</span>
+                        <span>@{datos.nombre}</span>
+                      </a>
+                    ),
+                )}
               </div>
             </div>
 
@@ -74,14 +67,12 @@ const Contact = ({ mail, tel, ubi }) => {
             <div className="info-card">
               <h3>INFORMACIÓN LABORAL</h3>
               <div className="contact-emails">
-                <div className="email-item">
-                  <span className="email-icon">📧</span>
-                  <span>sucursales@loomasricopanaderias.com.ar</span>
-                </div>
-                <div className="email-item">
-                  <span className="email-icon">📧</span>
-                  <span>gerencia@loomasricopanaderias.com.ar</span>
-                </div>
+                {laboral.map((datos, index) => (
+                  <div className="email-item">
+                    <span className="email-icon">📧</span>
+                    <span>{datos.dato}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -115,22 +106,26 @@ const Contact = ({ mail, tel, ubi }) => {
             <form className="contact-form" onSubmit={handleSubmit}>
               {/* Selector de tipo de pedido */}
               <div className="pedido-tipo">
-                <label className={`tipo-option ${tipoPedido === 'delivery' ? 'active' : ''}`}>
+                <label
+                  className={`tipo-option ${tipoPedido === "delivery" ? "active" : ""}`}
+                >
                   <input
                     type="radio"
                     name="tipoPedido"
                     value="delivery"
-                    checked={tipoPedido === 'delivery'}
+                    checked={tipoPedido === "delivery"}
                     onChange={(e) => setTipoPedido(e.target.value)}
                   />
                   <span>🚚 Delivery</span>
                 </label>
-                <label className={`tipo-option ${tipoPedido === 'retiro' ? 'active' : ''}`}>
+                <label
+                  className={`tipo-option ${tipoPedido === "retiro" ? "active" : ""}`}
+                >
                   <input
                     type="radio"
                     name="tipoPedido"
                     value="retiro"
-                    checked={tipoPedido === 'retiro'}
+                    checked={tipoPedido === "retiro"}
                     onChange={(e) => setTipoPedido(e.target.value)}
                   />
                   <span>🏪 Retiro en local</span>
@@ -159,7 +154,7 @@ const Contact = ({ mail, tel, ubi }) => {
                 />
               </div>
 
-              {tipoPedido === 'delivery' && (
+              {tipoPedido === "delivery" && (
                 <div className="form-row">
                   <input
                     type="text"
@@ -188,9 +183,21 @@ const Contact = ({ mail, tel, ubi }) => {
             <div className="delivery-apps">
               <span>También pedí por:</span>
               <div className="app-logos">
-                <img src="/api/placeholder/80/30" alt="Rappi" className="app-logo" />
-                <img src="/api/placeholder/80/30" alt="PedidosYa" className="app-logo" />
-                <img src="/api/placeholder/80/30" alt="Uber Eats" className="app-logo" />
+                <img
+                  src="/api/placeholder/80/30"
+                  alt="Rappi"
+                  className="app-logo"
+                />
+                <img
+                  src="/api/placeholder/80/30"
+                  alt="PedidosYa"
+                  className="app-logo"
+                />
+                <img
+                  src="/api/placeholder/80/30"
+                  alt="Uber Eats"
+                  className="app-logo"
+                />
               </div>
             </div>
           </div>
@@ -204,7 +211,8 @@ const Contact = ({ mail, tel, ubi }) => {
         </div>
 
         <div className="contact-copyright">
-          © Todos los derechos reservados por <a href="https://pycx.netlify.app">PYCX</a>
+          © Todos los derechos reservados por{" "}
+          <a href="https://pycx.netlify.app">PYCX</a>
         </div>
       </div>
     </section>

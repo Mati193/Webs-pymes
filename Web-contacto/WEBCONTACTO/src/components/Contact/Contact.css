@@ -224,6 +224,7 @@
   border-radius: 12px;
   font-size: 1rem;
   transition: all 0.3s ease;
+  color: black;
 }
 
 .contact-form input:focus,
@@ -231,7 +232,7 @@
 .contact-form select:focus {
   outline: none;
   border-color: var(--color-tertiary);
-  background: white;
+  background: color-mix(in srgb, var(--color-primary-light) 90%, transparent);
 }
 
 .submit-btn {

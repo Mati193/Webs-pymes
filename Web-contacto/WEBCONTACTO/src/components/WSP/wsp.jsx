@@ -1,9 +1,9 @@
 import "./WhatsAppButton.css";
 
-function WhatsAppButton() {
+function WhatsAppButton({ numero }) {
   return (
     <a
-      href="https://wa.me/+5491234567890?text=Gracias%20por%20comunicarte"
+      href={`${"https://wa.me/+549" + numero + "?text=Gracias%20por%20comunicarte"}`}
       className="wsp-float"
       target="_blank"
       rel="noopener noreferrer"

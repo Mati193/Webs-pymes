@@ -4,7 +4,8 @@ import logo from "./assets/Logo_panteon.jpg";
 import About from "./components/About";
 import Productos from "./components/Productos";
 import Contact from "./components/Contact/Contact";
-import WSP from "./components/WSP/wsp"
+import WSP from "./components/WSP/wsp";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 
 // Constante para función productos Mati
 const productos = [
@@ -37,9 +38,36 @@ const productos = [
   ["Medialunas", "Medialunas de grasa o manteca", logo],
   ["Medialunas", "Medialunas de grasa o manteca", logo],
   ["Medialunas", "Medialunas de grasa o manteca", logo],
-
 ];
 
+const redes = [
+  {
+    nombre: "pan-teon",
+    habilitado: true,
+    icon: "📷",
+  },
+  {
+    nombre: "panficadora.pan-teon",
+    habilitado: true,
+    icon: "📘",
+  },
+  {
+    nombre: "difusion pan-teon",
+    habilitado: true,
+    icon: "📢",
+  },
+  {
+    nombre: "linktree/panteon",
+    habilitado: true,
+    icon: "🔗",
+  },
+];
+
+const laboral = [
+  {
+    dato: "panificadora.panteon@gmail.com",
+  },
+];
 // Constante para funcion productos Tito
 // const productos = [
 //   {
@@ -73,7 +101,9 @@ const productos = [
 function App() {
   return (
     <>
-      <><WSP></WSP></>
+      <>
+        <WSP numero={"3512139324"}></WSP>
+      </>
       <NavBar
         marca={"Pan-teon"}
         logo={logo}
@@ -103,6 +133,8 @@ function App() {
         mail={"panteon_panificadora@gmail.com"}
         tel={" 1234567890"}
         ubi={"Río ceballos, Argentina"}
+        redes={redes}
+        laboral={laboral}
       />
     </>
   );

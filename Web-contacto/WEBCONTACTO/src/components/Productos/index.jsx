@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./productos.css";
 import "../global.css";
+import Boton from "../Boton";
 
 /*Esta funcion la hizo Mati*/
 function Productos({ eslogan, productos }) {
@@ -22,6 +23,9 @@ function Productos({ eslogan, productos }) {
             <div className="card-body">
               <h5 className="card-title">{producto[0]}</h5>
               <p className="card-text">{producto[1]}</p>
+            </div>
+            <div className="botonera">
+              <Boton texto={"Agregar al carrito"} tipo={"claro"} />
             </div>
           </div>
         ))}
