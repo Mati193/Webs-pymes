@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
 
-const Contact = ({ mail, tel, ubi, redes, laboral }) => {
+const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -33,8 +33,19 @@ const Contact = ({ mail, tel, ubi, redes, laboral }) => {
     }, 1500);
   };
 
+  const generarMensaje = () => {
+    let mensaje = "Pedido:\n\n";
+
+    carrito.forEach((producto) => {
+      mensaje += `• ${producto.nombre} x${producto.cantidad}\n`;
+    });
+
+    return mensaje;
+  };
+
   return (
     <section id="contacto" className="contact section">
+      <textarea value={generarMensaje()} readOnly rows="6" />
       <div className="contact-container">
         {/* HERO */}
         <div className="contact-hero">

@@ -5,7 +5,7 @@ import "../global.css";
 import Boton from "../Boton";
 
 /*Esta funcion la hizo Mati*/
-function Productos({ eslogan, productos }) {
+function Productos({ eslogan, productos, agregarProducto }) {
   return (
     <section className="fondo" id="productos">
       <div className="titulos">
@@ -16,16 +16,20 @@ function Productos({ eslogan, productos }) {
         {productos.map((producto, index) => (
           <div className="card card-hover" key={index}>
             <img
-              src={producto[2]}
+              src={producto.img}
               className="img-productos"
-              alt={producto[0]}
+              alt={producto.nombre}
             />
             <div className="card-body">
-              <h5 className="card-title">{producto[0]}</h5>
-              <p className="card-text">{producto[1]}</p>
+              <h5 className="card-title">{producto.nombre}</h5>
+              <p className="card-text">{producto.desc}</p>
             </div>
             <div className="botonera">
-              <Boton texto={"Agregar al carrito"} tipo={"claro"} />
+              <Boton
+                texto={"Agregar al carrito"}
+                tipo={"claro"}
+                onClick={() => agregarProducto(producto)}
+              />
             </div>
           </div>
         ))}

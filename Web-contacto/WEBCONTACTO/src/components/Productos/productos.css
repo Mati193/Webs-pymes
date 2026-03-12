@@ -143,6 +143,12 @@
     0 0 0 6px var(--accent-burgundy) inset;
 }
 
+.botonera {
+  display: flex;
+  top: -5000;
+  margin-bottom: 50px;
+}
+
 /* Elementos decorativos tipo "sello" */
 .card::before {
   content: "🍞";
@@ -201,7 +207,7 @@
 
 /* ===== CONTENIDO CON ESTILO VINTAGE ===== */
 .card-body {
-  padding: 25px 20px 20px;
+  padding: 25px 0px 20px;
   position: relative;
   z-index: 3;
   background: var(--light-cream);
