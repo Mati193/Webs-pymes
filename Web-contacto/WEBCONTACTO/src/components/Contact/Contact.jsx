@@ -34,7 +34,7 @@ const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
   };
 
   const generarMensaje = () => {
-    let mensaje = "Pedido:\n\n";
+    let mensaje = "Buen dia! Voy a necesitar: \n";
 
     carrito.forEach((producto) => {
       mensaje += `• ${producto.nombre} x${producto.cantidad}\n`;
@@ -45,7 +45,6 @@ const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
 
   return (
     <section id="contacto" className="contact section">
-      <textarea value={generarMensaje()} readOnly rows="6" />
       <div className="contact-container">
         {/* HERO */}
         <div className="contact-hero">
@@ -180,8 +179,8 @@ const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
                 name="message"
                 rows="4"
                 placeholder="Contanos qué necesitás... (ej: 12 medialunas, 1 bizcochuelo)"
-                value={formData.message}
                 onChange={handleChange}
+                value={formData.message}
                 required
               />
 

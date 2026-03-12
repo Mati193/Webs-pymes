@@ -5,6 +5,7 @@ import About from "./components/About";
 import Productos from "./components/Productos";
 import Contact from "./components/Contact/Contact";
 import WSP from "./components/WSP/wsp";
+import Carrito from "./components/Carrito";
 import React, { useState } from "react";
 import { icon } from "@fortawesome/fontawesome-svg-core";
 
@@ -100,6 +101,7 @@ const productos = [
 
 function App() {
   const [carrito, setCarrito] = useState([]);
+  const [añadido, setAñadido] = useState(false);
 
   const agregarProducto = (producto) => {
     const existe = carrito.find((p) => p.nombre === producto.nombre);
@@ -115,10 +117,13 @@ function App() {
     }
   };
 
+  const importar = (carrito) => {};
+
   return (
     <>
       <>
         <WSP numero={"3512139324"}></WSP>
+        <Carrito carrito={carrito} />
       </>
       <NavBar
         marca={"Pan-teon"}
