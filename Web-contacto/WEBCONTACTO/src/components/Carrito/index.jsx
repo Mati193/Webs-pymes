@@ -1,17 +1,18 @@
+import React from "react";
+import { useCart } from "../CartContext/CartContext";  // 👈 Ruta corregida
 import "./carrito.css";
-import logo from "../../../public/fondo-contacto2.jpg";
 
-function Carrito({ carrito, onClick }) {
+function Carrito() {
+  const { totalItems, toggleCart } = useCart();
+
   return (
     <button
-      href=""
       className="carrito-float"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chatear por WhatsApp"
-      onClick={() => onClick}
+      onClick={toggleCart}
+      aria-label="Carrito de compras"
     >
-      <img src={logo} alt="WhatsApp" />
+      <i className="fas fa-shopping-cart"></i>
+      {totalItems > 0 && <span className="carrito-badge">{totalItems}</span>}
     </button>
   );
 }

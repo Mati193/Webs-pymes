@@ -1,15 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useCart } from "../CartContext/CartContext";
+import { saveOrderToJSON } from "../../utils/saveOrder";
 import "./Contact.css";
 
-const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
+const Contact = ({ mail, tel, ubi, redes, laboral }) => {
+  const { carrito, vaciarCarrito, closeCart } = useCart();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     message: "",
+    address: ""
   });
 
   const [sending, setSending] = useState(false);
   const [tipoPedido, setTipoPedido] = useState("delivery");
+
+  // Efecto para pre-cargar el mensaje con los productos del carrito
+  useEffect(() => {
+    if (carrito.length > 0) {
+      const mensajeProductos = carrito.map(p => 
+        `${p.nombre} x${p.cantidad} - $${p.precio * p.cantidad}`
+      ).join('\n');
+      
+      setFormData(prev => ({
+        ...prev,
+        message: mensajeProductos
+      }));
+    }
+  }, [carrito]);
 
   const handleChange = (e) => {
     setFormData({
@@ -18,29 +36,95 @@ const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
     });
   };
 
+  const generarMensajeWhatsApp = () => {
+    let mensaje = `🍞 *NUEVO PEDIDO - PAN-TEON* 🍞\n\n`;
+    mensaje += `👤 *Cliente:* ${formData.name}\n`;
+    mensaje += `📞 *Teléfono:* ${formData.phone}\n`;
+    mensaje += `🚚 *Tipo:* ${tipoPedido === "delivery" ? "Delivery" : "Retiro en local"}\n`;
+    
+    if (tipoPedido === "delivery" && formData.address) {
+      mensaje += `📍 *Dirección:* ${formData.address}\n`;
+    }
+    
+    mensaje += `\n📋 *PRODUCTOS:*\n`;
+    
+    let total = 0;
+    carrito.forEach((producto) => {
+      const subtotal = producto.precio * producto.cantidad;
+      total += subtotal;
+      mensaje += `• ${producto.nombre} x${producto.cantidad} - $${subtotal}\n`;
+    });
+    
+    mensaje += `\n💰 *TOTAL: $${total}*\n`;
+    
+    if (formData.message && formData.message !== carrito.map(p => `${p.nombre} x${p.cantidad}`).join('\n')) {
+      mensaje += `\n📝 *Observaciones:* ${formData.message}`;
+    }
+    
+    return mensaje;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSending(true);
 
+    // Calcular total
+    const total = carrito.reduce((sum, p) => sum + (p.precio * p.cantidad), 0);
+
+    // Preparar datos para guardar (esto es invisible para el cliente)
+    const orderData = {
+      id: Date.now(),
+      fecha: new Date().toISOString(),
+      cliente: {
+        nombre: formData.name,
+        telefono: formData.phone,
+        direccion: tipoPedido === "delivery" ? formData.address : "Retiro en local",
+        tipoPedido: tipoPedido
+      },
+      productos: carrito.map(p => ({
+        id: p.id,
+        nombre: p.nombre,
+        cantidad: p.cantidad,
+        precioUnitario: p.precio,
+        subtotal: p.precio * p.cantidad
+      })),
+      total: total,
+      observaciones: formData.message
+    };
+
+    // Guardar en localStorage (solo para nosotros, el cliente no se entera)
+    try {
+      const pedidosGuardados = JSON.parse(localStorage.getItem('pedidos') || '[]');
+      pedidosGuardados.push(orderData);
+      localStorage.setItem('pedidos', JSON.stringify(pedidosGuardados));
+      console.log('✅ Pedido guardado internamente');
+    } catch (error) {
+      console.error('Error guardando pedido:', error);
+    }
+
+    // Generar mensaje de WhatsApp
+    const mensaje = generarMensajeWhatsApp();
+    const numeroWhatsApp = "549" + tel.replace(/\D/g, '');
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
+    // Abrir WhatsApp después de un pequeño delay
     setTimeout(() => {
-      alert("¡Mensaje enviado! Te respondemos dentro de 24hs.");
+      window.open(urlWhatsApp, '_blank');
+      
+      // Limpiar todo (sin mostrar alertas técnicas al cliente)
+      vaciarCarrito();
+      closeCart();
       setFormData({
         name: "",
         phone: "",
         message: "",
+        address: ""
       });
       setSending(false);
-    }, 1500);
-  };
-
-  const generarMensaje = () => {
-    let mensaje = "Buen dia! Voy a necesitar: \n";
-
-    carrito.forEach((producto) => {
-      mensaje += `• ${producto.nombre} x${producto.cantidad}\n`;
-    });
-
-    return mensaje;
+      
+      // Opcional: mensaje sutil de éxito (puedes eliminarlo si prefieres)
+      // alert("✅ ¡Pedido enviado! Te contactaremos a la brevedad");
+    }, 800);
   };
 
   return (
@@ -64,7 +148,7 @@ const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
                 {redes.map(
                   (datos, index) =>
                     datos.habilitado && (
-                      <a href="#" className="social-item">
+                      <a key={index} href="#" className="social-item">
                         <span className="social-icon">{datos.icon}</span>
                         <span>@{datos.nombre}</span>
                       </a>
@@ -78,7 +162,7 @@ const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
               <h3>INFORMACIÓN LABORAL</h3>
               <div className="contact-emails">
                 {laboral.map((datos, index) => (
-                  <div className="email-item">
+                  <div key={index} className="email-item">
                     <span className="email-icon">📧</span>
                     <span>{datos.dato}</span>
                   </div>
@@ -111,6 +195,11 @@ const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
             <div className="form-header">
               <h3>HACÉ TU PEDIDO</h3>
               <p>Completá el formulario y te contactamos</p>
+              {carrito.length > 0 && (
+                <div className="cart-summary">
+                  <span>🛒 {carrito.reduce((total, item) => total + item.cantidad, 0)} productos en tu carrito</span>
+                </div>
+              )}
             </div>
 
             <form className="contact-form" onSubmit={handleSubmit}>
@@ -170,6 +259,8 @@ const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
                     type="text"
                     name="address"
                     placeholder="Dirección de entrega"
+                    value={formData.address}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -181,35 +272,12 @@ const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
                 placeholder="Contanos qué necesitás... (ej: 12 medialunas, 1 bizcochuelo)"
                 onChange={handleChange}
                 value={formData.message}
-                required
               />
 
-              <button className="submit-btn" disabled={sending}>
-                {sending ? "Enviando..." : "CONTACTAR 👩🏻‍🍳"}
+              <button type="submit" className="submit-btn" disabled={sending}>
+                {sending ? "Procesando..." : "CONFIRMAR PEDIDO POR WHATSAPP 👩🏻‍🍳"}
               </button>
             </form>
-
-            {/* Logos de apps de delivery */}
-            <div className="delivery-apps">
-              <span>También pedí por:</span>
-              <div className="app-logos">
-                <img
-                  src="/api/placeholder/80/30"
-                  alt="Rappi"
-                  className="app-logo"
-                />
-                <img
-                  src="/api/placeholder/80/30"
-                  alt="PedidosYa"
-                  className="app-logo"
-                />
-                <img
-                  src="/api/placeholder/80/30"
-                  alt="Uber Eats"
-                  className="app-logo"
-                />
-              </div>
-            </div>
           </div>
         </div>
 
