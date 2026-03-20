@@ -104,11 +104,11 @@ h3 {
   h1 {
     font-size: 3rem;
   }
-  
+
   h2 {
     font-size: 2.2rem;
   }
-  
+
   .container {
     max-width: 900px;
     padding: 0 1.8rem;
@@ -119,24 +119,24 @@ h3 {
   h1 {
     font-size: 2.5rem;
   }
-  
+
   h2 {
     font-size: 2rem;
   }
-  
+
   h3 {
     font-size: 1.3rem;
   }
-  
+
   .section {
     padding: 4rem 0;
   }
-  
+
   .btn {
     padding: 0.7rem 1.5rem;
     font-size: 0.95rem;
   }
-  
+
   .container {
     padding: 0 1.5rem;
   }
@@ -146,39 +146,51 @@ h3 {
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.7rem;
   }
-  
+
   h3 {
     font-size: 1.2rem;
   }
-  
-  .section {
-    padding: 3rem 0;
-  }
-  
-  .container {
-    padding: 0 1.2rem;
-  }
+
+
+
 }
 
 @media (max-width: 390px) {
   h1 {
     font-size: 1.8rem;
   }
-  
+
   h2 {
     font-size: 1.5rem;
   }
-  
+
   .container {
     padding: 0 1rem;
   }
-  
+
   .btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.85rem;
+  }
+
+  .projects {
+    height: 270vh;
+  }
+}
+
+@media (max-width: 280px) {
+  .projects {
+    height: 290vh;
+    background: url(/src/styles/fondoazul2.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+  .project-card{
+    height: 420px;
   }
 }

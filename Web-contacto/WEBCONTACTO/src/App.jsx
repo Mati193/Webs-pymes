@@ -118,7 +118,7 @@ function HomePage() {
 
       <Contact
         mail={"panteon_panificadora@gmail.com"}
-        tel={"1234567890"}
+        tel={"3512139324"}
         ubi={"Río ceballos, Argentina"}
         redes={redes}
         laboral={laboral}

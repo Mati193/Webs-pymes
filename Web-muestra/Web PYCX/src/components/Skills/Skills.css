@@ -65,33 +65,9 @@
   border: 1px solid rgba(37, 99, 235, 0.1);
 }
 
+.skills-grid {
+    margin-top: 20000px;
+  }
 
 
 /* ===== RESPONSIVE SKILLS ===== */
-
-@media (max-width: 1300px) {
-  .skills-grid {
-    max-width: 700px;
-  }
-}
-
-@media (max-width: 992px) {
-  .skills-grid {
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-  }
-
-  .skill-header {
-    font-size: 0.95rem;
-  }
-
-
-}
-
-
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-    max-width: 350px;
-  }
-}

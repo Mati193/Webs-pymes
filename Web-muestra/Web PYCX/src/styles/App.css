@@ -434,9 +434,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  max-width: 600px;
   margin: 0 auto;
 }
+
 
 .skill-item {
   background: rgba(4, 7, 64, 0.5);
@@ -510,6 +510,16 @@
 
 /* ===== RESPONSIVE APP ===== */
 
+@media (max-width: 1500px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .skills-note {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 1300px) {
   .nav-container {
     max-width: 1100px;
@@ -523,7 +533,9 @@
   .projects-grid {
     gap: 1.5rem;
   }
+
 }
+
 
 @media (max-width: 992px) {
   .nav-container {
@@ -550,9 +562,16 @@
     gap: 1rem;
   }
 
+
+}
+
+@media (max-width:800px) {
   .skills-grid {
     grid-template-columns: repeat(3, 1fr);
-    max-width: 700px;
+  }
+
+  .skills-note {
+    display: none;
   }
 }
 
@@ -640,7 +659,7 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .navbar {
     padding: 0.8rem 0;
   }
@@ -694,14 +713,13 @@
     font-size: 1.2rem;
   }
 
+  .skills-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .skill-item {
-    padding: 0.8rem;
-  }
-
-  .skill-item span {
-    font-size: 0.9rem;
-  }
+    margin-bottom: 0rem;
+}
 
   .contact-text {
     font-size: 1rem;
@@ -773,17 +791,6 @@
     padding: 0.2rem 0.6rem;
   }
 
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .skill-item span {
-    font-size: 0.8rem;
-  }
 
   .contact-text {
     font-size: 0.95rem;
@@ -805,43 +812,43 @@
   }
 }
 
-
-@media(max-width: 480px) {
+@media (max-width: 420px) {
   .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    gap: 12px;
+    max-width: 320px;
+    margin: 0 auto 30px;
   }
 
-  .section-header h2{
-    font-size: 15px;
-  }
-  .skills-note p{
-    font-size: 15px;
-  }
-}
-
-
-@media(max-width: 395px){
-  .skills-note p{
-    font-size: 12px;
+  .skills{
+    height: 150vh;
   }
 
-   .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
+  .skill-item {
+    padding: 12px;
   }
 
-  
-}
+  .skill-header {
+    margin-bottom: 8px;
+  }
 
-@media(max-width:375px){
-  .skills-note{
-    display: none;
+  .skill-name {
+    font-size: 0.9rem;
+    gap: 6px;
+  }
+
+  .skill-emoji {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+
+  .skill-percentage {
+    font-size: 0.85rem;
+    padding: 3px 8px;
+  }
+
+  .progress-bar {
+    height: 6px;
   }
 }
