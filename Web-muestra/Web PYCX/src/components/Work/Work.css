@@ -566,7 +566,7 @@
 }
 
 /* ===== RESPONSIVE 400px CON EFECTO CLICK ===== */
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
   .como-trabajamos{
     padding:2rem 0;
