@@ -1,0 +1,36 @@
+
+.contenedor.about {
+  background: url(fondo\ naranja.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 100px 20px;
+}
+.personal {
+  margin: auto;
+  width: 70%;
+}
+
+.skills {
+  width: 100%;
+}
+
+h2 {
+  display: block;
+  width: 100%;
+}
+
+p {
+  display: block;
+}
+
+.contenedor_frase {
+  background-color: var(--color-primary-light);
+
+  height: 200px;
+  background: url(https://preview.redd.it/push-push-push-todays-matchup-mundo-v0-f6wej57e0o5f1.jpg?width=1080&crop=smart&auto=webp&s=43eeb9c9ce05e7397cdeeb74cf7568fc76af76f8);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

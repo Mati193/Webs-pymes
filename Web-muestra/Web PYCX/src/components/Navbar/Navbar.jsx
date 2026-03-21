@@ -26,7 +26,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-container container">
         <div className="logo" onClick={() => scrollToSection("hero")}>
-          <img src="pycx.png" alt="PYCX | Desarrollo Web para Empresas PYMES" />
+          <img src="logoPYCX.png" alt="Logo PYCX | Desarrollo Web para Empresas PYMES" />
         </div>
 
         {/* MENU ICON - Font Awesome */}
