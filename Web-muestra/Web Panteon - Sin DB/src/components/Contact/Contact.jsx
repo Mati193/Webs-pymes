@@ -38,7 +38,7 @@ const Contact = ({ mail, tel, ubi, redes, laboral }) => {
       <div className="contact-container">
         {/* HERO */}
         <div className="contact-hero">
-          <span className="section-badge">♨️ HACE TUS PEDIDOS</span>
+          <span className="section-badge"><i class="fa-solid fa-fire"></i> HACE TUS PEDIDOS</span>
           <h2>
             NUESTROS <span>CONTACTOS</span>
           </h2>
