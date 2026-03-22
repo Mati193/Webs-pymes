@@ -2,10 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./productos.css";
 import "../global.css";
-import Boton from "../Boton";
 
-/*Esta funcion la hizo Mati*/
-function Productos({ eslogan, productos, agregarProducto }) {
+function Productos({ eslogan, productos }) {
   return (
     <section className="fondo" id="productos">
       <div className="titulos">
@@ -24,13 +22,7 @@ function Productos({ eslogan, productos, agregarProducto }) {
               <h5 className="card-title">{producto.nombre}</h5>
               <p className="card-text">{producto.desc}</p>
             </div>
-            <div className="botonera">
-              <Boton
-                texto={"Agregar al carrito"}
-                tipo={"claro"}
-                onClick={() => agregarProducto(producto)}
-              />
-            </div>
+            {/* Eliminé la botonera de agregar al carrito */}
           </div>
         ))}
       </div>

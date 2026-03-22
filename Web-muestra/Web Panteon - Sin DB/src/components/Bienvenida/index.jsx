@@ -46,7 +46,7 @@ function Bienvenida({ logo, marca, eslogan, t1, desc }) {
         <img
           src={logo}
           alt="logo"
-          className="logo rounded-circle img-fluid"
+          className="logo img-fluid"
           data-aos="fade-up-right"
         />
 

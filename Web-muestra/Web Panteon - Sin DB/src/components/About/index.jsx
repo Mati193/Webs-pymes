@@ -4,7 +4,7 @@ import "./about.css";
 import "../global.css";
 import logo from "../../assets/Logo_panteon.jpg";
 import Card from "../Card/index.jsx";
-import PerfilCard from "../Perfil-Card/index.jsx";
+import PerfilCard from "../Perfil-Card/index.jsx"; // <--- CORREGIDO
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
@@ -12,42 +12,44 @@ import React, { useEffect } from "react";
 function About({ titulo, presentacion, frase }) {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // duración de animación
-      once: true, // solo se anima una vez
+      duration: 1000,
+      once: true,
     });
   }, []);
+  
   const skills = [
     {
       titulo: "Panificación artesanal",
       description:
         "Cada producto se elabora siguiendo procesos tradicionales, respetando tiempos de fermentación y técnicas que garantizan sabor y textura auténticos.",
-      emoji: <i class="fa-solid fa-bread-slice"></i>,
+      emoji: <i className="fa-solid fa-bread-slice"></i>,
     },
     {
       titulo: "Ingredientes de calidad",
       description:
         "Seleccionamos cuidadosamente nuestras materias primas para asegurar productos frescos, naturales y de excelente calidad.",
-      emoji: <i class="fa-solid fa-star"></i>,
+      emoji: <i className="fa-solid fa-star"></i>,
     },
     {
       titulo: "Horneado diario",
       description:
         "Nuestros panes y especialidades se hornean todos los días para ofrecer siempre productos recién hechos.",
-      emoji: <i class="fa-solid fa-calendar-check"></i>,
+      emoji: <i className="fa-solid fa-calendar-check"></i>,
     },
     {
       titulo: "Creatividad en recetas",
       description:
         "Combinamos tradición con innovación para ofrecer nuevas variedades de panes y productos que sorprendan a nuestros clientes.",
-      emoji: <i class="fa-solid fa-paintbrush"></i>,
+      emoji: <i className="fa-solid fa-paintbrush"></i>,
     },
     {
       titulo: "Compromiso con el sabor",
       description:
         "Cada receta está pensada para resaltar el sabor auténtico del pan artesanal, manteniendo siempre nuestro estándar de calidad.",
-      emoji: <i class="fa-solid fa-handshake"></i>,
+      emoji: <i className="fa-solid fa-handshake"></i>,
     },
   ];
+  
   const team = [
     {
       name: "Mateo",
@@ -72,6 +74,7 @@ function About({ titulo, presentacion, frase }) {
       skills: ["Organización", "Gestion", "Atención", "Orden"],
     },
   ];
+  
   return (
     <section id="about" className="contenedor about">
       <div className="personal" data-aos="fade-right">

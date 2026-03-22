@@ -14,16 +14,12 @@
   top: 0;
   left: 0;
   right: 0;
-
   height: 12%;
-  /* altura inicial fija */
   overflow: hidden;
-  /* importante */
-
   display: flex;
   align-items: center;
-
   transition: height 0.4s ease;
+  color: white;
 }
 
 /* cuando pasas el mouse queda mas sombra, copado */
@@ -35,11 +31,9 @@
   content: "";
   position: absolute;
   inset: 0;
-
   background: linear-gradient(90deg,
       var(--secondary-800),
       var(--color-secondary-dark));
-
   opacity: 0;
   transition: opacity 0.6s ease;
 }
@@ -57,21 +51,23 @@
 }
 
 .desplazado-img {
-  width: 75px !important;
-  height: 60px !important;
+  width: 125px !important;
+  height: 80px !important;
+}
+
+/* contenedor del logo y marca */
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* la foto/logo */
 .img-navbar {
   width: 120px;
-  height: 80px;
-  margin: 0 10px 0 0;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    height 0.3s ease,
-    width 0.3s ease;
+  height: 70px;
+  margin: 0;
+  transition: transform 0.3s ease, border-color 0.3s ease, height 0.3s ease, width 0.3s ease;
   object-fit: cover;
 }
 
@@ -87,7 +83,7 @@
   letter-spacing: 0.5px;
   position: relative;
   transition: color 0.3s ease;
-  margin: 0 15px !important;
+  margin: 0 !important;
 }
 
 /* rayita abajo que aparece solita */
@@ -111,7 +107,6 @@
 
 /* el link de la marca, ese que dice el nombre */
 .a-navbar {
-  margin-left: 5px;
   font-size: 1.3rem;
   font-weight: 600 !important;
   background: linear-gradient(45deg, #fff, #e0e0e0);
@@ -127,24 +122,72 @@
       var(--tertiary-400));
 }
 
-/* los botoncitos de navegacion (t1, t2, t3) */
-.navbar-brand.d-inline-block {
+/* Contenedor de links de navegación */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+/* Estilos para los links de navegación */
+.nav-link {
   padding: 8px 16px !important;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  color: black;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  margin: 0 5px !important;
 }
 
 /* cuando pasas el mouse se re copan los botones */
-.navbar-brand.d-inline-block:hover {
+.nav-link:hover {
   background: color-mix(in srgb, var(--primary-200) 15%, transparent);
   border-color: color-mix(in srgb, var(--color-primary-light) 30%, transparent);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px color-mix(in srgb, var(--color-tertiary-light) 20%, transparent);
-  color: grey;
+  color: #e0e0e0;
+}
+
+/* Botón menú hamburguesa */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  margin-left: auto;
+}
+
+.hamburger-menu span {
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 /* pa que entre lindo desde arriba */
@@ -162,4 +205,279 @@
 
 .navbar {
   animation: slideDown 0.5s ease-out;
+}
+
+.navbar.desplazado {
+  min-height: 90px;
+}
+
+
+/* ============================================ */
+/* RESPONSIVE DESIGN - TODAS LAS BREAKPOINTS */
+/* ============================================ */
+
+/* 1400px - XL Desktop */
+@media (max-width: 1400px) {
+  .navbar {
+    height: 11%;
+    padding: 0.7rem 2rem;
+  }
+
+  .a-navbar {
+    display: none;
+  }
+
+  .img-navbar {
+    position: relative;
+    left: 50px;
+    width: 120px;
+    height: 90px;
+  }
+
+  .a-navbar {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    padding: 6px 14px !important;
+    font-size: 0.95rem;
+  }
+
+  .navbar.desplazado {
+    min-height: 60px;
+  }
+
+  .desplazado-img {
+    width: 100px !important;
+    height: 65px !important;
+    border-radius: 20px;
+  }
+}
+
+/* 992px - Desktop / Tablet Landscape */
+@media (max-width: 992px) {
+  .navbar {
+    height: auto;
+    min-height: 70px;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .navbar-brand-container {
+    flex-shrink: 0;
+  }
+
+  .img-navbar {
+    width: 100px;
+    height: 75px;
+  }
+
+  .a-navbar {
+    font-size: 1.1rem;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 350px;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary-800) 0%, var(--color-secondary-dark) 100%);
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 2rem;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px !important;
+    font-size: 1.1rem;
+    margin: 0 !important;
+  }
+
+  .nav-link:hover {
+    transform: translateX(10px);
+  }
+
+  .navbar.desplazado {
+    min-height: 60px;
+  }
+
+  .desplazado-img {
+    width: 100px !important;
+    height: 65px !important;
+    border-radius: 20px;
+  }
+}
+
+/* 756px - Tablet Portrait */
+@media (max-width: 756px) {
+  .navbar {
+    padding: 0.5rem 1.2rem;
+  }
+
+  .a-navbar {
+    display: none;
+  }
+
+  .img-navbar {
+    position: relative;
+    left: 50px;
+    border-radius: 10px;
+  }
+
+  .a-navbar {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    width: 80%;
+    gap: 20px;
+  }
+
+  .nav-link {
+    padding: 10px 16px !important;
+    font-size: 1rem;
+  }
+
+  .navbar.desplazado {
+    min-height: 55px;
+  }
+
+  .desplazado-img {
+    width: 100px !important;
+    height: 65px !important;
+    border-radius: 20px;
+  }
+}
+
+/* 552px - Mobile Landscape */
+@media (max-width: 552px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-brand-container {
+    gap: 6px;
+  }
+
+  .a-navbar {
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    width: 85%;
+    gap: 15px;
+  }
+
+  .nav-link {
+    padding: 8px 14px !important;
+    font-size: 0.95rem;
+  }
+
+  .hamburger-menu {
+    width: 26px;
+    height: 18px;
+  }
+
+  .navbar.desplazado {
+    min-height: 50px;
+  }
+
+
+}
+
+/* 420px - Mobile Medium */
+@media (max-width: 420px) {
+  .navbar {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .navbar-brand-container {
+    gap: 5px;
+  }
+
+  .a-navbar {
+    font-size: 0.85rem;
+  }
+
+  .nav-links {
+    width: 90%;
+    gap: 12px;
+  }
+
+  .nav-link {
+    padding: 6px 12px !important;
+    font-size: 0.9rem;
+  }
+
+  .hamburger-menu {
+    width: 24px;
+    height: 16px;
+  }
+
+  .hamburger-menu span {
+    height: 2.5px;
+  }
+
+  .navbar.desplazado {
+    min-height: 48px;
+  }
+
+
+}
+
+/* 350px - Mobile Small */
+@media (max-width: 350px) {
+  .navbar {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .navbar-brand-container {
+    gap: 4px;
+  }
+
+  .a-navbar {
+    font-size: 0.75rem;
+  }
+
+  .nav-links {
+    width: 95%;
+    gap: 10px;
+    padding: 1.5rem;
+  }
+
+  .nav-link {
+    padding: 5px 10px !important;
+    font-size: 0.85rem;
+  }
+
+  .hamburger-menu {
+    width: 22px;
+    height: 15px;
+  }
+
+  .hamburger-menu span {
+    height: 2px;
+  }
+
+  .navbar.desplazado {
+    min-height: 45px;
+  }
+
+
 }

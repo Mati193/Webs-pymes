@@ -195,9 +195,12 @@
     color-mix(in srgb, var(--color-primary) 95%, transparent); /* Borde sutil */
 }
 
+
+/*DISPLAY NONE LOGO APENAS ENTRES*/
 .logo {
-  width: 180px; /* Un poco más pequeño para darle más protagonismo al texto */
-  height: 180px;
+  display: none;
+  width: 1000px; /* Un poco más pequeño para darle más protagonismo al texto */
+  height: 500px;
   object-fit: cover;
   margin: 0.5rem 0 0.5rem 0;
   animation: floatLogo 8s ease-in-out infinite;

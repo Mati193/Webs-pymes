@@ -1,4 +1,7 @@
-const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
+import React, { useState } from "react";
+import "./Contact.css";
+
+const Contact = ({ mail, tel, ubi, redes, laboral }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -28,16 +31,6 @@ const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
       });
       setSending(false);
     }, 1500);
-  };
-
-  const generarMensaje = () => {
-    let mensaje = "Buen dia! Voy a necesitar: \n";
-
-    carrito.forEach((producto) => {
-      mensaje += `• ${producto.nombre} x${producto.cantidad}\n`;
-    });
-
-    return mensaje;
   };
 
   return (
@@ -176,8 +169,8 @@ const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
                 name="message"
                 rows="4"
                 placeholder="Contanos qué necesitás... (ej: 12 medialunas, 1 bizcochuelo)"
-                onChange={handleChange}
                 value={formData.message}
+                onChange={handleChange}
                 required
               />
 
@@ -187,7 +180,7 @@ const Contact = ({ mail, tel, ubi, redes, laboral, carrito }) => {
             </form>
 
             {/* Logos de apps de delivery */}
-            <div className="delivery-apps" hidden="true">
+            <div className="delivery-apps" hidden="off">
               <span>También pedí por:</span>
               <div className="app-logos">
                 <img

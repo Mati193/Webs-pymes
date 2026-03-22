@@ -305,3 +305,223 @@
   opacity: 0.5;
   transition: left 0.8s ease;
 }
+
+/* ===== RESPONSIVE 420px ===== */
+@media (max-width: 420px) {
+  /* Sección general */
+  .fondo {
+    padding: 50px 12px;
+  }
+
+  /* Títulos */
+  .titulos {
+    margin-bottom: 40px;
+  }
+
+  .titulos h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 var(--accent-burgundy), 4px 4px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .titulos h2::before {
+    transform: translate(4px, 4px);
+  }
+
+  .titulos h2::after {
+    transform: translate(6px, 6px);
+  }
+
+  .titulos h5 {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 0 10px;
+  }
+
+  .titulos h5::before,
+  .titulos h5::after {
+    content: "✦";
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+
+  /* Contenedor de productos */
+  .contenedor-productos {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  /* Cards */
+  .card {
+    max-width: 100%;
+    border-radius: 25px 25px 18px 18px;
+    box-shadow: 0 12px 25px -8px rgba(0, 0, 0, 0.5),
+      0 0 0 2px var(--accent-gold) inset,
+      0 0 0 4px var(--accent-burgundy) inset;
+  }
+
+  .card:hover {
+    transform: translateY(-8px) rotate(0.5deg);
+    box-shadow: 0 20px 35px -8px
+        color-mix(in srgb, var(--secondary-800) 60%, var(--color-primary-dark)),
+      0 0 0 2px var(--accent-gold) inset,
+      0 0 0 4px var(--accent-burgundy) inset;
+  }
+
+  /* Elementos decorativos */
+  .card::before {
+    font-size: 1.5rem;
+    top: 8px;
+    right: 8px;
+    opacity: 0.4;
+  }
+
+  .card:hover::before {
+    opacity: 0.7;
+    transform: rotate(0deg) scale(1.1);
+  }
+
+  .card::after {
+    height: 30px;
+  }
+
+  /* Imagen */
+  .img-productos {
+    height: 180px;
+    border-bottom-width: 3px;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  }
+
+  .card:hover .img-productos {
+    transform: scale(1.05) rotate(-0.5deg);
+  }
+
+  /* Cuerpo de la card */
+  .card-body {
+    padding: 18px 12px 15px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+
+  .card-title::after {
+    width: 50px;
+    height: 3px;
+    margin: 6px auto 0;
+  }
+
+  .card:hover .card-title::after {
+    width: 80px;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+    margin: 12px 0 3px;
+    line-height: 1.4;
+    padding: 0 3px;
+  }
+
+  .card-text::before,
+  .card-text::after {
+    font-size: 0.8rem;
+    margin: 0 5px;
+  }
+
+  /* Efecto de brillo ajustado */
+  .card .shine-effect {
+    width: 150%;
+    height: 150%;
+    transform: rotate(25deg);
+  }
+}
+
+/* ===== AJUSTES ADICIONALES PARA 350px (EXTRA PEQUEÑO) ===== */
+@media (max-width: 350px) {
+  .fondo {
+    padding: 40px 8px;
+  }
+
+  .titulos h2 {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+  }
+
+  .titulos h5 {
+    font-size: 0.8rem;
+  }
+
+  .titulos h5::before,
+  .titulos h5::after {
+    margin: 0 5px;
+    font-size: 0.8rem;
+  }
+
+  .contenedor-productos {
+    gap: 25px;
+    padding: 5px;
+  }
+
+  .card {
+    border-radius: 20px 20px 15px 15px;
+  }
+
+  .img-productos {
+    height: 160px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
+  .card-body {
+    padding: 15px 10px 12px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-title::after {
+    width: 45px;
+  }
+
+  .card:hover .card-title::after {
+    width: 70px;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+    margin: 10px 0 2px;
+  }
+
+  .card-text::before,
+  .card-text::after {
+    font-size: 0.75rem;
+    margin: 0 4px;
+  }
+}
+
+/* ===== AJUSTE PARA PANTALLAS MUY PEQUEÑAS EN ORIENTACIÓN HORIZONTAL ===== */
+@media (max-width: 700px) and (orientation: landscape) {
+  .fondo {
+    padding: 40px 20px;
+  }
+
+  .contenedor-productos {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 280px));
+    gap: 25px;
+  }
+
+  .img-productos {
+    height: 160px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+}
